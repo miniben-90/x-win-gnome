@@ -1,6 +1,5 @@
 {
   "name": "x-win-gnome",
-  "packageManager": "yarn@4.6.0",
   "type": "module",
   "license": "MIT",
   "repository": {

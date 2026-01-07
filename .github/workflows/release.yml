@@ -28,6 +28,7 @@ jobs:
         run: cd packages/gnome-45 && zip -r ../../x-win-gnome-45.zip . && cd ../..
 
       - name: Create release
+        if: ${{ startsWith(github.ref, 'refs/tags/') && startsWith(github.ref_name, 'v') }}
         uses: softprops/action-gh-release@v1
         with:
           body: Release ${{ github.ref_name }}
