@@ -1,0 +1,37 @@
+run-name: Create Gnome Extension for @miniben90/x-win npm package and x-win crates package
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - "v*.*.*"
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      TAG: ${{ github.ref_name }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - run: npm install
+      - run: npm build
+      - name: Create archive for gnome between 42 to 44
+        run: cd packages/gnome-42 && zip -r ../../x-win-gnome-42.zip . && cd ../..
+      - name: Create archive for gnome > 45
+        run: cd packages/gnome-45 && zip -r ../../x-win-gnome-45.zip . && cd ../..
+
+      - name: Create release
+        uses: softprops/action-gh-release@v1
+        with:
+          body: Release ${{ github.ref_name }}
+          files: |
+            x-win-gnome-42.zip
+            x-win-gnome-45.zip
+          fail_on_unmatched_files: true

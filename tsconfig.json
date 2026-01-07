@@ -1,0 +1,8 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.gnome42.json" },
+    { "path": "./tsconfig.gnome45.json" }
+  ],
+  "include": [".d.ts", "@types/**/*.d.ts"]
+}
