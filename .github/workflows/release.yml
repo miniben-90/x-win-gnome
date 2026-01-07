@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: 22
       - run: npm install
-      - run: npm build
+      - run: npm run build
       - name: Create archive for gnome between 42 to 44
         run: cd packages/gnome-42 && zip -r ../../x-win-gnome-42.zip . && cd ../..
       - name: Create archive for gnome > 45
