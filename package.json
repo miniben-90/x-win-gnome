@@ -10,9 +10,6 @@
     "url": "https://github.com/miniben-90/x-win-gnome/issues"
   },
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "homepage": "https://github.com/miniben-90/x-win-gnome#readme",
   "sideEffects": false,
   "dependencies": {
@@ -32,6 +29,8 @@
   "scripts": {
     "build:gnome45": "tsc -p tsconfig.gnome45.json",
     "build:gnome42": "tsc -p tsconfig.gnome42.json",
-    "build": "npm run build:gnome45 && npm run build:gnome42 && node .scripts/build.mjs"
-  }
+    "build:all": "npm run build:gnome45 && npm run build:gnome42",
+    "build": "npm run build:all && node .scripts/build.mjs"
+  },
+  "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447"
 }

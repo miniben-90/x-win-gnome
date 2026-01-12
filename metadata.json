@@ -4,7 +4,5 @@
   "uuid": "x-win@miniben-90.github.io",
   "shell-version": [ "42", "43", "44", "45", "46", "47", "48", "49" ],
   "url": "https://github.com/miniben-90/x-win-gnome.git",
-  "version-name": "1.8.0",
-  "version": 1,
   "settings-schema": "org.gnome.Shell.Extensions.XWinWaylandExtension"
 }

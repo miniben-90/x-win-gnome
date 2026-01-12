@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es2018",
-    "module": "es2015",
+    "module": "es2020",
     "lib": ["es2018"],
     "moduleResolution": "bundler",
     "outDir": "./dist/gnome-42",
@@ -9,9 +9,11 @@
     "strict": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": false,
-    "experimentalDecorators": false,
+    "experimentalDecorators": true,
     "noImplicitUseStrict": false,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
   },
-  "include": ["src/gnome-42/**/*.ts", "types/**/*.d.ts"],
+  "include": ["src/extension.ts", "types/**/*.d.ts"],
   "exclude": ["node_modules"]
 }

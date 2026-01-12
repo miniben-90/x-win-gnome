@@ -11,9 +11,9 @@ const __dirname = path.dirname(__filename);
 const rootDir = path.join(__dirname, '..');
 const packagesDir = path.join(rootDir, 'packages');
 
-const { TAG } = process.env;
+const { TAG = undefined } = process.env;
 
-const version = (TAG.startsWith('v') ? TAG.substring(1) : TAG) ?? '0.0.0';
+const version = (TAG?.startsWith('v') ? TAG.substring(1) : TAG) ?? '0.0.0';
 
 const colors = {
   reset: '\x1b[0m',
@@ -49,30 +49,37 @@ function generateArchive(isGnome42 = false, metadata = {}) {
   if (isGnome42) {
     rewriteImportsForGnome42(copyDir);
   }
-  fs.copyFileSync(copyDir, path.join(folderDir, 'extension.js'));
+  fs.copyFileSync(copyDir, extensionDir);
 
   const versions = isGnome42 ? ["42", "43", "44"] : ["45", "46", "47", "48", "49"];
   metadata['shell-version'] = versions;
-  metadata['version-name'] = `${version}`;
-  metadata['version'] = version;
 
   fs.writeFileSync(metadataDir, JSON.stringify(metadata, null, 2), { flag: 'w', encoding: 'utf8' });
 
-  log('\n  ✓ ...Build successful', colors.green);
+  log(`\n  ✓ ...Build successful for version ${version}`, colors.green);
 }
 
 function rewriteImportsForGnome42(filePath) {
   if (!fs.existsSync(filePath)) {
     throw new Error(`'${filePath}' file not found!`);
   }
-  
+
   log(`\n  📝 Rewrite extension.js for GNOME 42-44 to replace imports ...`, colors.yellow);
   let contents = fs.readFileSync(filePath, 'utf8');
+  // Remove Extension import
+  contents = contents.replace('import { Extension } from "resource:///org/gnome/shell/extensions/extension.js";', '');
   contents = contents.replace(
     /import\s+(\w+)\s+from\s+['"]gi:\/\/(\w+)['"]/g,
     'const $1 = imports.gi.$2'
   );
-  contents = contents.replace('const St = imports.gi.St;', 'const { Gtk: St } = imports.gi;')
+  contents = contents.replace('const St = imports.gi.St;', 'const { Gtk: St } = imports.gi;');
+  /** Remove part of extend */
+  contents = contents.replace(' extends Extension', '');
+  contents = contents.replace('        super(...arguments);', '');
+  contents = contents.replace('export default XWinWaylandExtension;', `
+function init() {
+  return new XWinWaylandExtension();
+}`);
   fs.writeFileSync(filePath, contents, {
     encoding: 'utf8',
     flag: 'w'
