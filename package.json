@@ -13,6 +13,8 @@
   "homepage": "https://github.com/miniben-90/x-win-gnome#readme",
   "sideEffects": false,
   "dependencies": {
+    "@eslint/config-helpers": "^0.5.1",
+    "@eslint/js": "^9.39.2",
     "@girs/gdk-4.0": "^4.0.0-4.0.0-beta.37",
     "@girs/gio-2.0": "^2.86.0-4.0.0-beta.37",
     "@girs/gjs": "^4.0.0-beta.38",
@@ -24,13 +26,28 @@
     "@girs/mtk-17": "^17.0.0-4.0.0-beta.37",
     "@girs/shell-17": "^17.0.0-4.0.0-beta.37",
     "@girs/st-17": "^17.0.0-4.0.0-beta.37",
-    "typescript": "^5.9.3"
+    "@typescript-eslint/eslint-plugin": "^8.53.0",
+    "@typescript-eslint/parser": "^8.53.0",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-formatter-junit": "^9.0.1",
+    "eslint-plugin-jsdoc": "^62.0.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^17.0.0",
+    "prettier": "^3.7.4",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.53.0"
   },
   "scripts": {
     "build:gnome45": "tsc -p tsconfig.gnome45.json",
     "build:gnome42": "tsc -p tsconfig.gnome42.json",
     "build:all": "npm run build:gnome45 && npm run build:gnome42",
-    "build": "npm run build:all && node .scripts/build.mjs"
+    "build": "npm run build:all && node .scripts/build.mjs",
+    "lint": "eslint",
+    "prepare": "husky"
   },
-  "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447"
+  "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447",
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
 }

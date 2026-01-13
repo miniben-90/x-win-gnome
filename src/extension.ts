@@ -1,11 +1,14 @@
-import { Extension } from "resource:///org/gnome/shell/extensions/extension.js";
-import type Meta from "gi://Meta";
-import type { XWinIcon, XWinWindowInfo } from "../types/x-win.js";
-import GLib from "gi://GLib";
-import Gio from "gi://Gio";
-import Shell from "gi://Shell";
-import St from "gi://St";
+import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
+import type Meta from 'gi://Meta';
+import type {XWinIcon, XWinWindowInfo} from '../types/x-win.js';
+import GLib from 'gi://GLib';
+import Gio from 'gi://Gio';
+import Shell from 'gi://Shell';
+import St from 'gi://St';
 
+/**
+ * Gnome Extension for x-win project
+ */
 export default class XWinWaylandExtension extends Extension {
   #dbus?: Gio.DBusExportedObject = undefined;
 
@@ -26,6 +29,9 @@ export default class XWinWaylandExtension extends Extension {
 </node>
 `;
 
+  /**
+   *
+   */
   public enable() {
     this.#dbus = Gio.DBusExportedObject.wrapJSObject(
       XWinWaylandExtension.DBUS_OBJECT,
@@ -33,10 +39,13 @@ export default class XWinWaylandExtension extends Extension {
     );
     this.#dbus.export(
       Gio.DBus.session,
-      "/org/gnome/Shell/Extensions/XWinWaylandExtension"
+      '/org/gnome/Shell/Extensions/XWinWaylandExtension'
     );
   }
 
+  /**
+   *
+   */
   public disable() {
     if (this.#dbus !== undefined) {
       this.#dbus.flush();
@@ -45,35 +54,46 @@ export default class XWinWaylandExtension extends Extension {
     this.#dbus = undefined;
   }
 
+  /**
+   *
+   */
   public get_open_windows(): string {
     const open_windows = global
       .get_window_actors()
-      .filter((value) => {
+      .filter(value => {
         return this._filterWindow(value);
       })
-      .map((value) => {
-        return this._strcut_data(value);
+      .map(value => {
+        return this._strcutData(value);
       });
     return JSON.stringify(open_windows);
   }
 
+  /**
+   *
+   */
   public get_active_window(): string {
-    const active_window = global.get_window_actors().find((window_actor) => {
-      window_actor.get_meta_window()?.has_focus() &&
-        this._filterWindow(window_actor);
+    const active_window = global.get_window_actors().find(window_actor => {
+      return (
+        window_actor.get_meta_window()?.has_focus() &&
+        this._filterWindow(window_actor)
+      );
     });
-    const windowInfo = this._strcut_data(active_window);
+    const windowInfo = this._strcutData(active_window);
     return JSON.stringify(windowInfo);
   }
 
+  /**
+   *
+   */
   public get_icon(window_id: number): string {
-    const iconInfo = this._get_icon(window_id);
+    const iconInfo = this._getIcon(window_id);
     return JSON.stringify(iconInfo);
   }
 
   private _emptyIconInfo(): XWinIcon {
     return {
-      data: "",
+      data: '',
       height: 0,
       width: 0,
     };
@@ -82,13 +102,13 @@ export default class XWinWaylandExtension extends Extension {
   private _emptyWindowInfo(): XWinWindowInfo {
     return {
       id: 0,
-      os: "linux",
-      title: "",
+      os: 'linux',
+      title: '',
       info: {
         process_id: 0,
-        path: "",
-        exec_name: "",
-        name: "",
+        path: '',
+        exec_name: '',
+        name: '',
       },
       position: {
         width: 0,
@@ -97,44 +117,44 @@ export default class XWinWaylandExtension extends Extension {
         y: 0,
         isFullScreen: false,
       },
-      usage: { memory: 0 },
+      usage: {memory: 0},
     };
   }
 
-  private _get_icon(window_id: number): XWinIcon {
-    const window_actors: Meta.WindowActor[] = global
+  private _getIcon(window_id: number): XWinIcon {
+    const windowActors: Meta.WindowActor[] = global
       .get_window_actors()
       .filter(this._filterWindow);
 
-    const meta_window: Meta.Window | null | undefined = window_actors
+    const metaWindow: Meta.Window | null | undefined = windowActors
       .find(
-        (window_actor) => window_actor.get_meta_window()?.get_id() === window_id
+        windowActor => windowActor.get_meta_window()?.get_id() === window_id
       )
       ?.get_meta_window();
 
-    if (!meta_window || !meta_window.get_id) {
+    if (!metaWindow || !metaWindow.get_id) {
       return this._emptyIconInfo();
     }
     const tracker = Shell.WindowTracker.get_default();
-    const window_app = tracker.get_window_app(meta_window);
-    const window_icon = window_app.get_icon();
-    const icon_theme = new St.IconTheme();
-    const icon_info = icon_theme.lookup_by_gicon(
-      window_icon,
+    const windowApp = tracker.get_window_app(metaWindow);
+    const windowIcon = windowApp.get_icon();
+    const iconTheme = new St.IconTheme();
+    const iconInfo = iconTheme.lookup_by_gicon(
+      windowIcon,
       128,
       St.IconLookupFlags.FORCE_SIZE
     );
-    if (!icon_info || !icon_info.load_icon) {
+    if (!iconInfo || !iconInfo.load_icon) {
       return this._emptyIconInfo();
     }
-    const icon_buffer = icon_info.load_icon();
-    const [success, unitArray] = icon_buffer.save_to_bufferv("png", [], []);
+    const icon_buffer = iconInfo.load_icon();
+    const [success, unitArray] = icon_buffer.save_to_bufferv('png', [], []);
     if (!success) {
       return this._emptyIconInfo();
     }
     const data = GLib.base64_encode(unitArray);
     return {
-      data: "data:image/png;base64," + data,
+      data: 'data:image/png;base64,' + data,
       height: icon_buffer.get_height(),
       width: icon_buffer.get_width(),
     };
@@ -148,65 +168,66 @@ export default class XWinWaylandExtension extends Extension {
     return window_actor.get_meta_window()?.get_window_type() !== -1;
   }
 
-  private _strcut_data(
+  private _strcutData(
     window_actor: Meta.WindowActor | undefined
   ): XWinWindowInfo {
     if (!window_actor || !window_actor.get_meta_window) {
       return this._emptyWindowInfo();
     }
-    const meta_window = window_actor.get_meta_window();
-    if (!meta_window) {
+    const metaWindow = window_actor.get_meta_window();
+    if (!metaWindow) {
       return this._emptyWindowInfo();
     }
 
-    const process_id = meta_window.get_pid ? meta_window.get_pid() : 0;
-    const info = Object.assign(this._get_process_info(process_id), {
-      name: meta_window.get_wm_class ? meta_window.get_wm_class() : "",
+    const process_id = metaWindow.get_pid ? metaWindow.get_pid() : 0;
+    const info = Object.assign(this._getProcessInfo(process_id), {
+      name: metaWindow.get_wm_class ? metaWindow.get_wm_class() : '',
       process_id,
     });
 
     return Object.assign(this._emptyWindowInfo(), {
-      id: meta_window.get_id ? meta_window.get_id() : 0,
+      id: metaWindow.get_id ? metaWindow.get_id() : 0,
       info,
-      title: meta_window.get_title ? meta_window.get_title() : "",
+      title: metaWindow.get_title ? metaWindow.get_title() : '',
       position: {
         width: window_actor.get_width ? window_actor.get_width() : 0,
         height: window_actor.get_height ? window_actor.get_height() : 0,
         x: window_actor.get_x ? window_actor.get_x() : 0,
         y: window_actor.get_y ? window_actor.get_y() : 0,
-        isFullScreen: meta_window.is_fullscreen
-          ? meta_window.is_fullscreen()
+        isFullScreen: metaWindow.is_fullscreen
+          ? metaWindow.is_fullscreen()
           : false,
       },
-      usage: { memory: this._get_memory_usage(process_id) },
+      usage: {memory: this._getMemoryUsage(process_id)},
     });
   }
 
-  private _get_memory_usage(pid: number): number {
+  private _getMemoryUsage(pid: number): number {
     const [isOk, contents] = GLib.file_get_contents(`/proc/${pid}/statm`);
     if (isOk) {
-      return parseInt(contents.toString().split(" ")[0], 10);
+      return parseInt(contents.toString().split(' ')[0], 10);
     }
     return 0;
   }
 
-  private _get_process_info(process_id: number): {
+  private _getProcessInfo(process_id: number): {
     path: string;
     exec_name: string;
   } {
-    let process_info = {
-      path: "",
-      exec_name: "",
+    const process_info = {
+      path: '',
+      exec_name: '',
     };
 
     try {
       const path = GLib.file_read_link(`/proc/${process_id}/exe`);
       if (path) {
         process_info.path = path;
-        process_info.exec_name = path.split("/").pop() || "";
+        process_info.exec_name = path.split('/').pop() || '';
       }
-    } catch (_error) {}
-
+    } catch {
+      /* empty */
+    }
     return process_info;
   }
 }

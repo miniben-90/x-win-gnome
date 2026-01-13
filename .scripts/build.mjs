@@ -3,7 +3,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { createRequire } from "module";
+import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 
 const __filename = fileURLToPath(import.meta.url);
@@ -51,7 +51,7 @@ function generateArchive(isGnome42 = false, metadata = {}) {
   }
   fs.copyFileSync(copyDir, extensionDir);
 
-  const versions = isGnome42 ? ["42", "43", "44"] : ["45", "46", "47", "48", "49"];
+  const versions = isGnome42 ? ['42', '43', '44'] : ['45', '46', '47', '48', '49'];
   metadata['shell-version'] = versions;
 
   fs.writeFileSync(metadataDir, JSON.stringify(metadata, null, 2), { flag: 'w', encoding: 'utf8' });
@@ -67,9 +67,9 @@ function rewriteImportsForGnome42(filePath) {
   log(`\n  📝 Rewrite extension.js for GNOME 42-44 to replace imports ...`, colors.yellow);
   let contents = fs.readFileSync(filePath, 'utf8');
   // Remove Extension import
-  contents = contents.replace('import { Extension } from "resource:///org/gnome/shell/extensions/extension.js";', '');
+  contents = contents.replace('import { Extension } from \'resource:///org/gnome/shell/extensions/extension.js\';', '');
   contents = contents.replace(
-    /import\s+(\w+)\s+from\s+['"]gi:\/\/(\w+)['"]/g,
+    /import\s+(\w+)\s+from\s+['']gi:\/\/(\w+)['']/g,
     'const $1 = imports.gi.$2'
   );
   contents = contents.replace('const St = imports.gi.St;', 'const { Gtk: St } = imports.gi;');
