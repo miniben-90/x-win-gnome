@@ -1,8 +1,7 @@
 {
-  "name": "@mininben90/x-win extended",
-  "description": "Get active and open window(s) informations for @miniben90/x-win node package.",
+  "name": "x-win plugin extension",
+  "description": "Get active and open window(s) informations for @miniben90/x-win node package and x-win Rust package.",
   "uuid": "x-win@miniben-90.github.io",
   "shell-version": [ "42", "43", "44", "45", "46", "47", "48", "49" ],
-  "url": "https://github.com/miniben-90/x-win-gnome.git",
-  "settings-schema": "org.gnome.Shell.Extensions.XWinWaylandExtension"
+  "url": "https://github.com/miniben-90/x-win-gnome.git"
 }

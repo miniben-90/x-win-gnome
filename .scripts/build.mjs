@@ -49,6 +49,9 @@ function generateArchive(isGnome42 = false, metadata = {}) {
   if (isGnome42) {
     rewriteImportsForGnome42(copyDir);
   }
+  if (!isGnome42) {
+    rewriteDbusProtection(copyDir);
+  }
   fs.copyFileSync(copyDir, extensionDir);
 
   const versions = isGnome42 ? ['42', '43', '44'] : ['45', '46', '47', '48', '49'];
@@ -59,12 +62,28 @@ function generateArchive(isGnome42 = false, metadata = {}) {
   log(`\n  ✓ ...Build successful for version ${version}`, colors.green);
 }
 
-function rewriteImportsForGnome42(filePath) {
+function checkFolder(filePath) {
   if (!fs.existsSync(filePath)) {
     throw new Error(`'${filePath}' file not found!`);
   }
+}
 
-  log(`\n  📝 Rewrite extension.js for GNOME 42-44 to replace imports ...`, colors.yellow);
+/**#dbus */
+function rewriteDbusProtection(filePath) {
+  checkFolder(filePath);
+  log(`\n  📝 Rewrite "${filePath}" for GNOME > 44 to replace _dbus to #dbus ...`, colors.yellow);
+  let contents = fs.readFileSync(filePath, 'utf8');
+  contents = contents.replace('private _dbus', '#dbus');
+  contents = contents.replaceAll('_dbus', '#dbus');
+  fs.writeFileSync(filePath, contents, {
+    encoding: 'utf8',
+    flag: 'w'
+  });
+}
+
+function rewriteImportsForGnome42(filePath) {
+  checkFolder(filePath);
+  log(`\n  📝 Rewrite "${filePath}" for GNOME 42-44 to replace imports ...`, colors.yellow);
   let contents = fs.readFileSync(filePath, 'utf8');
   // Remove Extension import
   contents = contents.replace('import { Extension } from \'resource:///org/gnome/shell/extensions/extension.js\';', '');
@@ -72,14 +91,18 @@ function rewriteImportsForGnome42(filePath) {
     /import\s+(\w+)\s+from\s+['']gi:\/\/(\w+)['']/g,
     'const $1 = imports.gi.$2'
   );
-  contents = contents.replace('const St = imports.gi.St;', 'const { Gtk: St } = imports.gi;');
+  // contents = contents.replace('const St = imports.gi.St;', 'const { Gtk: St } = imports.gi;');
   /** Remove part of extend */
   contents = contents.replace(' extends Extension', '');
   contents = contents.replace('        super(...arguments);', '');
-  contents = contents.replace('export default XWinWaylandExtension;', `
+
+  contents = contents.replace('export default XWinWaylandExtension;', ``);
+
+  contents += `
 function init() {
   return new XWinWaylandExtension();
-}`);
+}`;
+
   fs.writeFileSync(filePath, contents, {
     encoding: 'utf8',
     flag: 'w'

@@ -5,12 +5,13 @@ import GLib from 'gi://GLib';
 import Gio from 'gi://Gio';
 import Shell from 'gi://Shell';
 import St from 'gi://St';
+import type GdkPixbuf from 'gi://GdkPixbuf';
 
 /**
  * Gnome Extension for x-win project
  */
-export default class XWinWaylandExtension extends Extension {
-  #dbus?: Gio.DBusExportedObject = undefined;
+class XWinWaylandExtension extends Extension {
+  private _dbus?: Gio.DBusExportedObject = undefined;
 
   public static DBUS_OBJECT = `
 <node>
@@ -29,34 +30,25 @@ export default class XWinWaylandExtension extends Extension {
 </node>
 `;
 
-  /**
-   *
-   */
   public enable() {
-    this.#dbus = Gio.DBusExportedObject.wrapJSObject(
+    this._dbus = Gio.DBusExportedObject.wrapJSObject(
       XWinWaylandExtension.DBUS_OBJECT,
       this
     );
-    this.#dbus.export(
+    this._dbus.export(
       Gio.DBus.session,
       '/org/gnome/Shell/Extensions/XWinWaylandExtension'
     );
   }
 
-  /**
-   *
-   */
   public disable() {
-    if (this.#dbus !== undefined) {
-      this.#dbus.flush();
-      this.#dbus.unexport();
+    if (this._dbus !== undefined) {
+      this._dbus.flush();
+      this._dbus.unexport();
     }
-    this.#dbus = undefined;
+    this._dbus = undefined;
   }
 
-  /**
-   *
-   */
   public get_open_windows(): string {
     const open_windows = global
       .get_window_actors()
@@ -69,9 +61,6 @@ export default class XWinWaylandExtension extends Extension {
     return JSON.stringify(open_windows);
   }
 
-  /**
-   *
-   */
   public get_active_window(): string {
     const active_window = global.get_window_actors().find(window_actor => {
       return (
@@ -83,9 +72,6 @@ export default class XWinWaylandExtension extends Extension {
     return JSON.stringify(windowInfo);
   }
 
-  /**
-   *
-   */
   public get_icon(window_id: number): string {
     const iconInfo = this._getIcon(window_id);
     return JSON.stringify(iconInfo);
@@ -137,27 +123,38 @@ export default class XWinWaylandExtension extends Extension {
     }
     const tracker = Shell.WindowTracker.get_default();
     const windowApp = tracker.get_window_app(metaWindow);
-    const windowIcon = windowApp.get_icon();
-    const iconTheme = new St.IconTheme();
-    const iconInfo = iconTheme.lookup_by_gicon(
-      windowIcon,
-      128,
-      St.IconLookupFlags.FORCE_SIZE
-    );
-    if (!iconInfo || !iconInfo.load_icon) {
+    const gicon = windowApp.get_icon();
+
+    let icon_buffer: GdkPixbuf.Pixbuf | null = null;
+
+    try {
+      // This part work only with gnome-shell >= 45
+      const iconTheme = new St.IconTheme();
+      const iconInfo = iconTheme.lookup_by_gicon(
+        gicon,
+        128,
+        St.IconLookupFlags.FORCE_SIZE
+      );
+      if (!iconInfo || !iconInfo.load_icon) {
+        return this._emptyIconInfo();
+      }
+      icon_buffer = iconInfo.load_icon();
+      if (!icon_buffer) {
+        return this._emptyIconInfo();
+      }
+      const [success, unitArray] = icon_buffer.save_to_bufferv('png', [], []);
+      if (!success) {
+        return this._emptyIconInfo();
+      }
+      const data = GLib.base64_encode(unitArray);
+      return {
+        data: 'data:image/png;base64,' + data,
+        height: icon_buffer.get_height(),
+        width: icon_buffer.get_width(),
+      };
+    } catch {
       return this._emptyIconInfo();
     }
-    const icon_buffer = iconInfo.load_icon();
-    const [success, unitArray] = icon_buffer.save_to_bufferv('png', [], []);
-    if (!success) {
-      return this._emptyIconInfo();
-    }
-    const data = GLib.base64_encode(unitArray);
-    return {
-      data: 'data:image/png;base64,' + data,
-      height: icon_buffer.get_height(),
-      width: icon_buffer.get_width(),
-    };
   }
 
   private _filterWindow(
@@ -205,7 +202,8 @@ export default class XWinWaylandExtension extends Extension {
   private _getMemoryUsage(pid: number): number {
     const [isOk, contents] = GLib.file_get_contents(`/proc/${pid}/statm`);
     if (isOk) {
-      return parseInt(contents.toString().split(' ')[0], 10);
+      const decoded = new TextDecoder().decode(contents);
+      return parseInt(decoded.split(' ')[0], 10);
     }
     return 0;
   }

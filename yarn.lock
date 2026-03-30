@@ -2,16 +2,16 @@
 # yarn lockfile v1
 
 
-"@es-joy/jsdoccomment@~0.79.0":
-  version "0.79.0"
-  resolved "https://registry.npmjs.org/@es-joy/jsdoccomment/-/jsdoccomment-0.79.0.tgz"
-  integrity sha512-q/Nc241VsVRC5b1dgbsOI0fnWfrb1S9sdceFewpDHto4+4r2o6SSCpcY+Z+EdLdMPN6Nsj/PjlPcKag6WbU6XQ==
+"@es-joy/jsdoccomment@~0.84.0":
+  version "0.84.0"
+  resolved "https://registry.npmjs.org/@es-joy/jsdoccomment/-/jsdoccomment-0.84.0.tgz"
+  integrity sha512-0xew1CxOam0gV5OMjh2KjFQZsKL2bByX1+q4j3E73MpYIdyUxcZb/xQct9ccUb+ve5KGUYbCUxyPnYB7RbuP+w==
   dependencies:
     "@types/estree" "^1.0.8"
-    "@typescript-eslint/types" "^8.52.0"
-    comment-parser "1.4.1"
+    "@typescript-eslint/types" "^8.54.0"
+    comment-parser "1.4.5"
     esquery "^1.7.0"
-    jsdoc-type-pratt-parser "~7.0.0"
+    jsdoc-type-pratt-parser "~7.1.1"
 
 "@es-joy/resolve.exports@1.2.0":
   version "1.2.0"
@@ -46,12 +46,12 @@
   dependencies:
     "@eslint/core" "^0.17.0"
 
-"@eslint/config-helpers@^0.5.1":
-  version "0.5.1"
-  resolved "https://registry.npmjs.org/@eslint/config-helpers/-/config-helpers-0.5.1.tgz"
-  integrity sha512-QN8067dXsXAl9HIvqws7STEviheRFojX3zek5OpC84oBxDGqizW9731ByF/ASxqQihbWrVDdZXS+Ihnsckm9dg==
+"@eslint/config-helpers@^0.5.3":
+  version "0.5.3"
+  resolved "https://registry.npmjs.org/@eslint/config-helpers/-/config-helpers-0.5.3.tgz"
+  integrity sha512-lzGN0onllOZCGroKJmRwY6QcEHxbjBw1gwB8SgRSqK8YbbtEXMvKynsXc3553ckIEBxsbMBU7oOZXKIPGZNeZw==
   dependencies:
-    "@eslint/core" "^1.0.1"
+    "@eslint/core" "^1.1.1"
 
 "@eslint/core@^0.17.0":
   version "0.17.0"
@@ -60,10 +60,10 @@
   dependencies:
     "@types/json-schema" "^7.0.15"
 
-"@eslint/core@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/@eslint/core/-/core-1.0.1.tgz"
-  integrity sha512-r18fEAj9uCk+VjzGt2thsbOmychS+4kxI14spVNibUO2vqKX7obOG+ymZljAwuPZl+S3clPGwCwTDtrdqTiY6Q==
+"@eslint/core@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.npmjs.org/@eslint/core/-/core-1.1.1.tgz"
+  integrity sha512-QUPblTtE51/7/Zhfv8BDwO0qkkzQL7P/aWWbqcf4xWLEYn1oKjdO0gglQBB4GAsu7u6wjijbCmzsUTy6mnk6oQ==
   dependencies:
     "@types/json-schema" "^7.0.15"
 
@@ -82,7 +82,7 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@eslint/js@^9.39.2", "@eslint/js@9.39.2":
+"@eslint/js@9.39.2", "@eslint/js@^9.39.2":
   version "9.39.2"
   resolved "https://registry.npmjs.org/@eslint/js/-/js-9.39.2.tgz"
   integrity sha512-q1mjIoW1VX4IvSocvM/vbTiveKC4k9eLrajNEuSsmjymSDEbpGddtpfOoN7YGAqBK3NG+uqo8ia4PDTt8buCYA==
@@ -132,7 +132,7 @@
     "@girs/pango-1.0" "1.57.0-4.0.0-beta.38"
     "@girs/pangocairo-1.0" "1.0.0-4.0.0-beta.38"
 
-"@girs/atk-1.0@^2.58.0-4.0.0-beta.38", "@girs/atk-1.0@2.58.0-4.0.0-beta.38":
+"@girs/atk-1.0@2.58.0-4.0.0-beta.38", "@girs/atk-1.0@^2.58.0-4.0.0-beta.38":
   version "2.58.0-4.0.0-beta.38"
   resolved "https://registry.npmjs.org/@girs/atk-1.0/-/atk-1.0-2.58.0-4.0.0-beta.38.tgz"
   integrity sha512-rfLlLlAecHE1uAqK81DHZT27E1nVwN/pAHtgbgDUcu70UdHoCYAsQymLjk/tuDcTX0Lwp6U9x6w+GHG1sbYlQA==
@@ -140,6 +140,15 @@
     "@girs/gjs" "4.0.0-beta.38"
     "@girs/glib-2.0" "2.86.0-4.0.0-beta.38"
     "@girs/gobject-2.0" "2.86.0-4.0.0-beta.38"
+
+"@girs/atk-1.0@2.58.3-4.0.0-beta.40":
+  version "2.58.3-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/atk-1.0/-/atk-1.0-2.58.3-4.0.0-beta.40.tgz"
+  integrity sha512-hpfdpswVe8nYi8tsWj9cm7RJE6BWd5qbnkZ8HwKReqUaSdzfvecn31B6UHi40ubZJwMPmPrtfAwUxY8N5TKfEA==
+  dependencies:
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
 
 "@girs/cairo-1.0@1.0.0-4.0.0-beta.38":
   version "1.0.0-4.0.0-beta.38"
@@ -150,7 +159,61 @@
     "@girs/glib-2.0" "2.86.0-4.0.0-beta.38"
     "@girs/gobject-2.0" "2.86.0-4.0.0-beta.38"
 
-"@girs/clutter-17@^17.0.0-4.0.0-beta.38", "@girs/clutter-17@17.0.0-4.0.0-beta.38":
+"@girs/cairo-1.0@1.0.0-4.0.0-beta.40":
+  version "1.0.0-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/cairo-1.0/-/cairo-1.0-1.0.0-4.0.0-beta.40.tgz"
+  integrity sha512-luqUsMf2cPphDc4lb8IHcw0bX8eGa4g0aQypZJypAeIs9eyHfEDHWKhLgp4I0HaQvaevbd3QBosaH7UhkArL1A==
+  dependencies:
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+
+"@girs/cally-10@10.0.0-4.0.0-beta.40":
+  version "10.0.0-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/cally-10/-/cally-10-10.0.0-4.0.0-beta.40.tgz"
+  integrity sha512-SzF8mgBTKFJJJCa2jgJ8E0apkIqz694vwEFka9LKAYmTn5iy22hyGAk6RlK2DchPMYbfFY9ZTUA8dnlmZAqkQw==
+  dependencies:
+    "@girs/atk-1.0" "2.58.3-4.0.0-beta.40"
+    "@girs/cairo-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/clutter-10" "10.0.0-4.0.0-beta.40"
+    "@girs/cogl-10" "10.0.0-4.0.0-beta.40"
+    "@girs/coglpango-10" "10.0.0-4.0.0-beta.40"
+    "@girs/freetype2-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gio-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/gl-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/graphene-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/harfbuzz-0.0" "11.5.1-4.0.0-beta.40"
+    "@girs/json-1.0" "1.10.8-4.0.0-beta.40"
+    "@girs/pango-1.0" "1.57.0-4.0.0-beta.40"
+    "@girs/pangocairo-1.0" "1.0.0-4.0.0-beta.40"
+
+"@girs/clutter-10@10.0.0-4.0.0-beta.40":
+  version "10.0.0-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/clutter-10/-/clutter-10-10.0.0-4.0.0-beta.40.tgz"
+  integrity sha512-lzYkAMoqDfibbp0HNFUViRu19BRNIDaGAyjxuS6k8vt/BKUu7bYHVx5SKfjHZ+IRPwD18U8YemHCXpqQ9yDzVA==
+  dependencies:
+    "@girs/atk-1.0" "2.58.3-4.0.0-beta.40"
+    "@girs/cairo-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/cogl-10" "10.0.0-4.0.0-beta.40"
+    "@girs/coglpango-10" "10.0.0-4.0.0-beta.40"
+    "@girs/freetype2-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gio-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/gl-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/graphene-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/harfbuzz-0.0" "11.5.1-4.0.0-beta.40"
+    "@girs/json-1.0" "1.10.8-4.0.0-beta.40"
+    "@girs/pango-1.0" "1.57.0-4.0.0-beta.40"
+    "@girs/pangocairo-1.0" "1.0.0-4.0.0-beta.40"
+
+"@girs/clutter-17@17.0.0-4.0.0-beta.38", "@girs/clutter-17@^17.0.0-4.0.0-beta.38":
   version "17.0.0-4.0.0-beta.38"
   resolved "https://registry.npmjs.org/@girs/clutter-17/-/clutter-17-17.0.0-4.0.0-beta.38.tgz"
   integrity sha512-RMEuc08wCaqIc3UcGdJr183kcN7VD0Q2v5WLczK9/Hn2gfo7xcc+BWjPcsSu4SuBpJPwF248jc+2IBbdXBGbCA==
@@ -169,6 +232,18 @@
     "@girs/harfbuzz-0.0" "11.5.0-4.0.0-beta.38"
     "@girs/mtk-17" "17.0.0-4.0.0-beta.38"
     "@girs/pango-1.0" "1.57.0-4.0.0-beta.38"
+
+"@girs/cogl-10@10.0.0-4.0.0-beta.40":
+  version "10.0.0-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/cogl-10/-/cogl-10-10.0.0-4.0.0-beta.40.tgz"
+  integrity sha512-/UP0r42rP2vJuyCej/sO8xkbD1jLFQucpF9wgHqpzMbuKyY2Fey+ys8mube0w2j+PjpD4kElUEeuVuqNc/U6fQ==
+  dependencies:
+    "@girs/cairo-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/gl-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/graphene-1.0" "1.0.0-4.0.0-beta.40"
 
 "@girs/cogl-17@17.0.0-4.0.0-beta.38":
   version "17.0.0-4.0.0-beta.38"
@@ -192,6 +267,25 @@
     "@girs/glib-2.0" "2.86.0-4.0.0-beta.38"
     "@girs/gobject-2.0" "2.86.0-4.0.0-beta.38"
 
+"@girs/coglpango-10@10.0.0-4.0.0-beta.40":
+  version "10.0.0-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/coglpango-10/-/coglpango-10-10.0.0-4.0.0-beta.40.tgz"
+  integrity sha512-yntm1wh4fBdJpmn3R+zfvSkTJXqy9RIaK0AgQUhX3ctASxsBIalUhD6mMLTxQxEFPpUgMKdpjKLj//PIlHg2Fw==
+  dependencies:
+    "@girs/cairo-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/cogl-10" "10.0.0-4.0.0-beta.40"
+    "@girs/freetype2-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gio-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/gl-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/graphene-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/harfbuzz-0.0" "11.5.1-4.0.0-beta.40"
+    "@girs/pango-1.0" "1.57.0-4.0.0-beta.40"
+    "@girs/pangocairo-1.0" "1.0.0-4.0.0-beta.40"
+
 "@girs/freetype2-2.0@2.0.0-4.0.0-beta.38":
   version "2.0.0-4.0.0-beta.38"
   resolved "https://registry.npmjs.org/@girs/freetype2-2.0/-/freetype2-2.0-2.0.0-4.0.0-beta.38.tgz"
@@ -199,6 +293,25 @@
   dependencies:
     "@girs/gjs" "4.0.0-beta.38"
     "@girs/gobject-2.0" "2.86.0-4.0.0-beta.38"
+
+"@girs/freetype2-2.0@2.0.0-4.0.0-beta.40":
+  version "2.0.0-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/freetype2-2.0/-/freetype2-2.0-2.0.0-4.0.0-beta.40.tgz"
+  integrity sha512-vS+etsSesMQZNH8Sei81fmkWcgYzjLDbddSPIZaCw2nJ1TIu8eC/CTW46bBk0JGgOaQwL3DxuE0V+BdyhQwIyQ==
+  dependencies:
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+
+"@girs/gck-1@1.0.0-4.0.0-beta.40":
+  version "1.0.0-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/gck-1/-/gck-1-1.0.0-4.0.0-beta.40.tgz"
+  integrity sha512-EwyvCT4T07KszlObtoljrXBMLsndff1pW5BUYVKiOQ4uGGlCBeOn6tK938V79f2W716Rrp92NaIJFGbTD2CNtw==
+  dependencies:
+    "@girs/gio-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
 
 "@girs/gck-2@4.4.0-4.0.0-beta.38":
   version "4.4.0-4.0.0-beta.38"
@@ -211,7 +324,19 @@
     "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.38"
     "@girs/gobject-2.0" "2.86.0-4.0.0-beta.38"
 
-"@girs/gcr-4@^4.4.0-4.0.0-beta.38", "@girs/gcr-4@4.4.0-4.0.0-beta.38":
+"@girs/gcr-3@3.41.2-4.0.0-beta.40":
+  version "3.41.2-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/gcr-3/-/gcr-3-3.41.2-4.0.0-beta.40.tgz"
+  integrity sha512-do6ww9+T4LMqO6Xe+aekDdO+5XNEa8sB1gMAWoZPjtrI4vlMTseLY7+l26zQVhSGzPdX7ANgoiKWX+bHDVH9BQ==
+  dependencies:
+    "@girs/gck-1" "1.0.0-4.0.0-beta.40"
+    "@girs/gio-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+
+"@girs/gcr-4@4.4.0-4.0.0-beta.38", "@girs/gcr-4@^4.4.0-4.0.0-beta.38":
   version "4.4.0-4.0.0-beta.38"
   resolved "https://registry.npmjs.org/@girs/gcr-4/-/gcr-4-4.4.0-4.0.0-beta.38.tgz"
   integrity sha512-dGEWwPhGWRBNgoI/TzX0whcGsKEbx9VXAcOWJdyHiB7HUefeECWxGHlcWK8NZD6mr0jhln+RjFiv/tB1QKUUDw==
@@ -231,7 +356,31 @@
     "@girs/gjs" "4.0.0-beta.38"
     "@girs/gobject-2.0" "2.86.0-4.0.0-beta.38"
 
-"@girs/gdk-4.0@^4.0.0-4.0.0-beta.37", "@girs/gdk-4.0@4.0.0-4.0.0-beta.38":
+"@girs/gdesktopenums-3.0@3.0.0-4.0.0-beta.40":
+  version "3.0.0-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/gdesktopenums-3.0/-/gdesktopenums-3.0-3.0.0-4.0.0-beta.40.tgz"
+  integrity sha512-ktQmvNTynx08AfkpO82y+zd17TwDjrIiD6ri2CPonR4P3HawCp5MUDFFEcmg5zVnIqpqrYwoVNLihCkf1fjQBw==
+  dependencies:
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+
+"@girs/gdk-3.0@3.24.51-4.0.0-beta.40":
+  version "3.24.51-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/gdk-3.0/-/gdk-3.0-3.24.51-4.0.0-beta.40.tgz"
+  integrity sha512-Q98qYdmwfkLevWa5Ho97ABekKgqj/BTymbH1qT3DlKf8ZIk7E6vQ4CsTuLhaXzizkmj10ZJFuBv6wTTrQ/yOww==
+  dependencies:
+    "@girs/cairo-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/freetype2-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gdkpixbuf-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gio-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/harfbuzz-0.0" "11.5.1-4.0.0-beta.40"
+    "@girs/pango-1.0" "1.57.0-4.0.0-beta.40"
+
+"@girs/gdk-4.0@4.0.0-4.0.0-beta.38":
   version "4.0.0-4.0.0-beta.38"
   resolved "https://registry.npmjs.org/@girs/gdk-4.0/-/gdk-4.0-4.0.0-4.0.0-beta.38.tgz"
   integrity sha512-hk6SG4pCcezKp2VNxJc0TC1gkZe3C8shD8sRQ3bUGyWl/9581WM2/8UU+W6fOf3SwXA1hquN6d3SjKbqkFNRKg==
@@ -248,6 +397,23 @@
     "@girs/pango-1.0" "1.57.0-4.0.0-beta.38"
     "@girs/pangocairo-1.0" "1.0.0-4.0.0-beta.38"
 
+"@girs/gdk-4.0@4.0.0-4.0.0-beta.40", "@girs/gdk-4.0@^4.0.0-4.0.0-beta.40":
+  version "4.0.0-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/gdk-4.0/-/gdk-4.0-4.0.0-4.0.0-beta.40.tgz"
+  integrity sha512-4O5Yqk1QSKUqaRn7402XtkGFwg/7SMoGof0Xe/JiqnjF7oDav2giRUoDKx4uXKnfQm+6NA69b0meGEXr8yJJYA==
+  dependencies:
+    "@girs/cairo-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/freetype2-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gdkpixbuf-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gio-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/harfbuzz-0.0" "11.5.1-4.0.0-beta.40"
+    "@girs/pango-1.0" "1.57.0-4.0.0-beta.40"
+    "@girs/pangocairo-1.0" "1.0.0-4.0.0-beta.40"
+
 "@girs/gdkpixbuf-2.0@2.0.0-4.0.0-beta.38":
   version "2.0.0-4.0.0-beta.38"
   resolved "https://registry.npmjs.org/@girs/gdkpixbuf-2.0/-/gdkpixbuf-2.0-2.0.0-4.0.0-beta.38.tgz"
@@ -258,6 +424,17 @@
     "@girs/glib-2.0" "2.86.0-4.0.0-beta.38"
     "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.38"
     "@girs/gobject-2.0" "2.86.0-4.0.0-beta.38"
+
+"@girs/gdkpixbuf-2.0@2.0.0-4.0.0-beta.40":
+  version "2.0.0-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/gdkpixbuf-2.0/-/gdkpixbuf-2.0-2.0.0-4.0.0-beta.40.tgz"
+  integrity sha512-ImVsfgs4OdJnWqZm1ugB+WcpySf2wNtY99nUBm+/YpCLeIyrl+NRbft+ymom6CTim83f3XzwaOCDEwE5azj42w==
+  dependencies:
+    "@girs/gio-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
 
 "@girs/gdm-1.0@^1.0.0-4.0.0-beta.38":
   version "1.0.0-4.0.0-beta.38"
@@ -270,7 +447,7 @@
     "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.38"
     "@girs/gobject-2.0" "2.86.0-4.0.0-beta.38"
 
-"@girs/gio-2.0@^2.86.0-4.0.0-beta.37", "@girs/gio-2.0@^2.86.0-4.0.0-beta.38", "@girs/gio-2.0@2.86.0-4.0.0-beta.38":
+"@girs/gio-2.0@2.86.0-4.0.0-beta.38", "@girs/gio-2.0@^2.86.0-4.0.0-beta.38":
   version "2.86.0-4.0.0-beta.38"
   resolved "https://registry.npmjs.org/@girs/gio-2.0/-/gio-2.0-2.86.0-4.0.0-beta.38.tgz"
   integrity sha512-hKCyDEqSIgqcZeFf63KNrUnrYtAuJ0yfIypbdLgNEMbJBPQ/e3ZiwzWa7i3OPCh52Cnl9qYRdj8MSbZndpyZiQ==
@@ -280,7 +457,17 @@
     "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.38"
     "@girs/gobject-2.0" "2.86.0-4.0.0-beta.38"
 
-"@girs/giounix-2.0@^2.0.0-4.0.0-beta.38", "@girs/giounix-2.0@2.0.0-4.0.0-beta.38":
+"@girs/gio-2.0@2.86.4-4.0.0-beta.40", "@girs/gio-2.0@^2.86.4-4.0.0-beta.40":
+  version "2.86.4-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/gio-2.0/-/gio-2.0-2.86.4-4.0.0-beta.40.tgz"
+  integrity sha512-TTAEE/2nCAkx01hID4n8f0ByiFJ0QwGJcY8QYmom19QXmlIWCLF/GWLeXi/7ZyKJOtChSFk8IJglS0O6zC1spw==
+  dependencies:
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+
+"@girs/giounix-2.0@2.0.0-4.0.0-beta.38", "@girs/giounix-2.0@^2.0.0-4.0.0-beta.38":
   version "2.0.0-4.0.0-beta.38"
   resolved "https://registry.npmjs.org/@girs/giounix-2.0/-/giounix-2.0-2.0.0-4.0.0-beta.38.tgz"
   integrity sha512-dSEbx3f/qFQTJLDFYy8DK5YRMtNc3RnWTuTaaKVN8FMeTiJRLVED+uv5LLR1zvjGac0R1mg0wqpwRTybVhfUXA==
@@ -291,7 +478,7 @@
     "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.38"
     "@girs/gobject-2.0" "2.86.0-4.0.0-beta.38"
 
-"@girs/gjs@^4.0.0-beta.38", "@girs/gjs@4.0.0-beta.38":
+"@girs/gjs@4.0.0-beta.38":
   version "4.0.0-beta.38"
   resolved "https://registry.npmjs.org/@girs/gjs/-/gjs-4.0.0-beta.38.tgz"
   integrity sha512-eI/9lfI1mQpXN8RsKiNRFWJso6LgQe9Eb+YxLAdKarD5fccvIRx3chsyIyhw5tYH7VvgaZkqm1c4GX7pDDokBQ==
@@ -301,6 +488,16 @@
     "@girs/glib-2.0" "2.86.0-4.0.0-beta.38"
     "@girs/gobject-2.0" "2.86.0-4.0.0-beta.38"
 
+"@girs/gjs@4.0.0-beta.40", "@girs/gjs@^4.0.0-beta.38":
+  version "4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/gjs/-/gjs-4.0.0-beta.40.tgz"
+  integrity sha512-+gHGA5PJvEExpiPkpc3+DSjhWGmxHDb482h52FO64eo2EmHuLoeOKCoUJIY0PS80xOJWFRSO2dNFxZdD1bV6XA==
+  dependencies:
+    "@girs/cairo-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/gio-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+
 "@girs/gl-1.0@1.0.0-4.0.0-beta.38":
   version "1.0.0-4.0.0-beta.38"
   resolved "https://registry.npmjs.org/@girs/gl-1.0/-/gl-1.0-1.0.0-4.0.0-beta.38.tgz"
@@ -309,13 +506,29 @@
     "@girs/gjs" "4.0.0-beta.38"
     "@girs/gobject-2.0" "2.86.0-4.0.0-beta.38"
 
-"@girs/glib-2.0@^2.86.0-4.0.0-beta.37", "@girs/glib-2.0@^2.86.0-4.0.0-beta.38", "@girs/glib-2.0@2.86.0-4.0.0-beta.38":
+"@girs/gl-1.0@1.0.0-4.0.0-beta.40":
+  version "1.0.0-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/gl-1.0/-/gl-1.0-1.0.0-4.0.0-beta.40.tgz"
+  integrity sha512-nv34HS9qgEIzXYoAfAYI16Rxvxa7OQHFIqVDLGR6LcPyDQQCMFnuZ4FtIr1YwAhUdZW0yaaUF9yvwesTgw37IA==
+  dependencies:
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+
+"@girs/glib-2.0@2.86.0-4.0.0-beta.38", "@girs/glib-2.0@^2.86.0-4.0.0-beta.38":
   version "2.86.0-4.0.0-beta.38"
   resolved "https://registry.npmjs.org/@girs/glib-2.0/-/glib-2.0-2.86.0-4.0.0-beta.38.tgz"
   integrity sha512-TFbrh5+Y3pb61synbhi37VrRzh0e+JQaRCzfGbe7oewUq0v7Sb8eSi2Fmj98r5tCizaRYptqgt6bxG7G5cFzVg==
   dependencies:
     "@girs/gjs" "4.0.0-beta.38"
     "@girs/gobject-2.0" "2.86.0-4.0.0-beta.38"
+
+"@girs/glib-2.0@2.86.4-4.0.0-beta.40", "@girs/glib-2.0@^2.86.4-4.0.0-beta.40":
+  version "2.86.4-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/glib-2.0/-/glib-2.0-2.86.4-4.0.0-beta.40.tgz"
+  integrity sha512-DTvRmZlTVpYW+JI0zMN/dybhzoqJ/I3bx3txftSQgcxXl3mKnrSI6Qzv15VTyxQSpcnD3CBxpnfYT/+QrzU9QQ==
+  dependencies:
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
 
 "@girs/gmodule-2.0@2.0.0-4.0.0-beta.38":
   version "2.0.0-4.0.0-beta.38"
@@ -325,6 +538,15 @@
     "@girs/gjs" "4.0.0-beta.38"
     "@girs/glib-2.0" "2.86.0-4.0.0-beta.38"
     "@girs/gobject-2.0" "2.86.0-4.0.0-beta.38"
+
+"@girs/gmodule-2.0@2.0.0-4.0.0-beta.40":
+  version "2.0.0-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/gmodule-2.0/-/gmodule-2.0-2.0.0-4.0.0-beta.40.tgz"
+  integrity sha512-srPSbc/uespMNHR2o2Gg6OYeCprW42gADIXCujpMMWl5OfJzKU0mA+R8Z/D713tDq0xp1Lz2P7hprVznf1uF3A==
+  dependencies:
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
 
 "@girs/gnome-shell@^49.0.1":
   version "49.1.0"
@@ -387,7 +609,7 @@
     "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.38"
     "@girs/gobject-2.0" "2.86.0-4.0.0-beta.38"
 
-"@girs/gnomedesktop-4.0@^4.0.0-4.0.0-beta.38", "@girs/gnomedesktop-4.0@4.0.0-4.0.0-beta.38":
+"@girs/gnomedesktop-4.0@4.0.0-4.0.0-beta.38", "@girs/gnomedesktop-4.0@^4.0.0-4.0.0-beta.38":
   version "4.0.0-4.0.0-beta.38"
   resolved "https://registry.npmjs.org/@girs/gnomedesktop-4.0/-/gnomedesktop-4.0-4.0.0-4.0.0-beta.38.tgz"
   integrity sha512-dVeHh4R3HlWQ1Up9N1V09cMiOXst073WQFJ3pJfmJ45RkbJLLlNZrLjO5+e1GUyF9Bq1NzDgTBOUR4xCIIW6dw==
@@ -400,13 +622,21 @@
     "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.38"
     "@girs/gobject-2.0" "2.86.0-4.0.0-beta.38"
 
-"@girs/gobject-2.0@^2.86.0-4.0.0-beta.37", "@girs/gobject-2.0@^2.86.0-4.0.0-beta.38", "@girs/gobject-2.0@2.86.0-4.0.0-beta.38":
+"@girs/gobject-2.0@2.86.0-4.0.0-beta.38", "@girs/gobject-2.0@^2.86.0-4.0.0-beta.38":
   version "2.86.0-4.0.0-beta.38"
   resolved "https://registry.npmjs.org/@girs/gobject-2.0/-/gobject-2.0-2.86.0-4.0.0-beta.38.tgz"
   integrity sha512-oYrm6Gb/tCQosMkN8Beu5jqGRkJ7LED4O1H1dKYOI4SnP1Ojb66A9ECy78yTO8piBtMopsbRODV81yKniVtKKA==
   dependencies:
     "@girs/gjs" "4.0.0-beta.38"
     "@girs/glib-2.0" "2.86.0-4.0.0-beta.38"
+
+"@girs/gobject-2.0@2.86.4-4.0.0-beta.40", "@girs/gobject-2.0@^2.86.4-4.0.0-beta.40":
+  version "2.86.4-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/gobject-2.0/-/gobject-2.0-2.86.4-4.0.0-beta.40.tgz"
+  integrity sha512-coS5607duUekhRfl2GDC9Gt3WcgAtTNEDL0efrRBBOuORjvBrIGiGJJXB9cX4jYQ7c9FITUMVLTd+a0MMRAaXA==
+  dependencies:
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
 
 "@girs/graphene-1.0@1.0.0-4.0.0-beta.38":
   version "1.0.0-4.0.0-beta.38"
@@ -416,6 +646,15 @@
     "@girs/gjs" "4.0.0-beta.38"
     "@girs/glib-2.0" "2.86.0-4.0.0-beta.38"
     "@girs/gobject-2.0" "2.86.0-4.0.0-beta.38"
+
+"@girs/graphene-1.0@1.0.0-4.0.0-beta.40":
+  version "1.0.0-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/graphene-1.0/-/graphene-1.0-1.0.0-4.0.0-beta.40.tgz"
+  integrity sha512-0ReJbd31inyIE7Q96I4ED1uj6ssmfl1iB4xc6eakac95FZK/uZSC6uBtBLfA/tmnkgRb7ChQgK/ZGbb8sx4tHQ==
+  dependencies:
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
 
 "@girs/gsk-4.0@4.0.0-4.0.0-beta.38":
   version "4.0.0-4.0.0-beta.38"
@@ -436,7 +675,45 @@
     "@girs/pango-1.0" "1.57.0-4.0.0-beta.38"
     "@girs/pangocairo-1.0" "1.0.0-4.0.0-beta.38"
 
-"@girs/gtk-4.0@^4.20.1-4.0.0-beta.37", "@girs/gtk-4.0@^4.20.1-4.0.0-beta.38", "@girs/gtk-4.0@4.20.1-4.0.0-beta.38":
+"@girs/gsk-4.0@4.0.0-4.0.0-beta.40":
+  version "4.0.0-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/gsk-4.0/-/gsk-4.0-4.0.0-4.0.0-beta.40.tgz"
+  integrity sha512-hSNHG+E6O736vLgGtMcG50iiSoK/tRIVdsJ55H/AqyRCL2HzCzUIAQ7VTqsCgDGGs0N2P8i6Oq0FAZ7+4j/3IQ==
+  dependencies:
+    "@girs/cairo-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/freetype2-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gdk-4.0" "4.0.0-4.0.0-beta.40"
+    "@girs/gdkpixbuf-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gio-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/graphene-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/harfbuzz-0.0" "11.5.1-4.0.0-beta.40"
+    "@girs/pango-1.0" "1.57.0-4.0.0-beta.40"
+    "@girs/pangocairo-1.0" "1.0.0-4.0.0-beta.40"
+
+"@girs/gtk-3.0@3.24.51-4.0.0-beta.40":
+  version "3.24.51-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/gtk-3.0/-/gtk-3.0-3.24.51-4.0.0-beta.40.tgz"
+  integrity sha512-6w6Q0XRXBvq3usfS6mHfWFfk4W1btp+BjXriam893HbMAaQNL0VLh2J+Da74xVCRYRvslXhv5jeWeBrRTTNngQ==
+  dependencies:
+    "@girs/atk-1.0" "2.58.3-4.0.0-beta.40"
+    "@girs/cairo-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/freetype2-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gdk-3.0" "3.24.51-4.0.0-beta.40"
+    "@girs/gdkpixbuf-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gio-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/harfbuzz-0.0" "11.5.1-4.0.0-beta.40"
+    "@girs/pango-1.0" "1.57.0-4.0.0-beta.40"
+    "@girs/xlib-2.0" "2.0.0-4.0.0-beta.40"
+
+"@girs/gtk-4.0@4.20.1-4.0.0-beta.38", "@girs/gtk-4.0@^4.20.1-4.0.0-beta.38":
   version "4.20.1-4.0.0-beta.38"
   resolved "https://registry.npmjs.org/@girs/gtk-4.0/-/gtk-4.0-4.20.1-4.0.0-beta.38.tgz"
   integrity sha512-lNujJDta1YK3/9Inp5HrtF/JOMN5EmD+3U7diRTyWNzc2KdaN2jO2mk90taaGK28xhoCC+VESkFkQAgFTwZXWw==
@@ -456,7 +733,27 @@
     "@girs/pango-1.0" "1.57.0-4.0.0-beta.38"
     "@girs/pangocairo-1.0" "1.0.0-4.0.0-beta.38"
 
-"@girs/gvc-1.0@^1.0.0-4.0.0-beta.38", "@girs/gvc-1.0@1.0.0-4.0.0-beta.38":
+"@girs/gtk-4.0@^4.20.3-4.0.0-beta.40":
+  version "4.20.3-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/gtk-4.0/-/gtk-4.0-4.20.3-4.0.0-beta.40.tgz"
+  integrity sha512-rdAkZpt6IvyF8dvNsvC1cU8beQl1LesH0ZzpYArF0kg5KnKGDOqVGAAFjcz4QOHQ3LRiWJ47S5VT4n/TkCG76w==
+  dependencies:
+    "@girs/cairo-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/freetype2-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gdk-4.0" "4.0.0-4.0.0-beta.40"
+    "@girs/gdkpixbuf-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gio-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/graphene-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/gsk-4.0" "4.0.0-4.0.0-beta.40"
+    "@girs/harfbuzz-0.0" "11.5.1-4.0.0-beta.40"
+    "@girs/pango-1.0" "1.57.0-4.0.0-beta.40"
+    "@girs/pangocairo-1.0" "1.0.0-4.0.0-beta.40"
+
+"@girs/gvc-1.0@1.0.0-4.0.0-beta.38", "@girs/gvc-1.0@^1.0.0-4.0.0-beta.38":
   version "1.0.0-4.0.0-beta.38"
   resolved "https://registry.npmjs.org/@girs/gvc-1.0/-/gvc-1.0-1.0.0-4.0.0-beta.38.tgz"
   integrity sha512-AUJ+6Aj7y9Q/3RYTCQJBtr1sckUodwJaE3ue1Ap7bCOy/ybiZdCGlucJqSfpT8B3VV5SUztqlxEcOhyGgpvtNQ==
@@ -466,6 +763,17 @@
     "@girs/glib-2.0" "2.86.0-4.0.0-beta.38"
     "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.38"
     "@girs/gobject-2.0" "2.86.0-4.0.0-beta.38"
+
+"@girs/gvc-1.0@1.0.0-4.0.0-beta.40":
+  version "1.0.0-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/gvc-1.0/-/gvc-1.0-1.0.0-4.0.0-beta.40.tgz"
+  integrity sha512-9tIXqOfRgSLuDxvGOsk+88WcXnnCUyDhRfF/cbCHjeJK8nsPQPKdsn4Gql0nOKcpQCwypYWjepOkmwkLoLrMbw==
+  dependencies:
+    "@girs/gio-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
 
 "@girs/harfbuzz-0.0@11.5.0-4.0.0-beta.38":
   version "11.5.0-4.0.0-beta.38"
@@ -477,7 +785,57 @@
     "@girs/glib-2.0" "2.86.0-4.0.0-beta.38"
     "@girs/gobject-2.0" "2.86.0-4.0.0-beta.38"
 
-"@girs/meta-17@^17.0.0-4.0.0-beta.37", "@girs/meta-17@^17.0.0-4.0.0-beta.38", "@girs/meta-17@17.0.0-4.0.0-beta.38":
+"@girs/harfbuzz-0.0@11.5.1-4.0.0-beta.40":
+  version "11.5.1-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/harfbuzz-0.0/-/harfbuzz-0.0-11.5.1-4.0.0-beta.40.tgz"
+  integrity sha512-cwR4WHJ9LtnvvXFUnkiFtWdInKvhlQUr3bQHmHiJxCjloQHHMNVA7CsrMDL/tRD9WoU77rQF6dB+uqSlRKT1zQ==
+  dependencies:
+    "@girs/freetype2-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+
+"@girs/json-1.0@1.10.8-4.0.0-beta.40":
+  version "1.10.8-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/json-1.0/-/json-1.0-1.10.8-4.0.0-beta.40.tgz"
+  integrity sha512-hS2sikgvXFnSr0g1H5711PAD8aa9eYL3sfo15LH4WtU/WG5lFKf8S5xDo2ozjuOCQzbrRlPmON3lL2zn3yHiyw==
+  dependencies:
+    "@girs/gio-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+
+"@girs/meta-10@10.0.0-4.0.0-beta.40", "@girs/meta-10@^10.0.0-4.0.0-beta.40":
+  version "10.0.0-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/meta-10/-/meta-10-10.0.0-4.0.0-beta.40.tgz"
+  integrity sha512-pn4f/Twot1NhdrC1qfUUrvBMqNmykwnEVSZP9yGVwqnPNGcGbScVwV/WxnVz9HZZESYrB+C2IiIfz8ocCAwncw==
+  dependencies:
+    "@girs/atk-1.0" "2.58.3-4.0.0-beta.40"
+    "@girs/cairo-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/clutter-10" "10.0.0-4.0.0-beta.40"
+    "@girs/cogl-10" "10.0.0-4.0.0-beta.40"
+    "@girs/coglpango-10" "10.0.0-4.0.0-beta.40"
+    "@girs/freetype2-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gdesktopenums-3.0" "3.0.0-4.0.0-beta.40"
+    "@girs/gdk-3.0" "3.24.51-4.0.0-beta.40"
+    "@girs/gdkpixbuf-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gio-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/gl-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/graphene-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/gtk-3.0" "3.24.51-4.0.0-beta.40"
+    "@girs/harfbuzz-0.0" "11.5.1-4.0.0-beta.40"
+    "@girs/json-1.0" "1.10.8-4.0.0-beta.40"
+    "@girs/pango-1.0" "1.57.0-4.0.0-beta.40"
+    "@girs/pangocairo-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/xfixes-4.0" "4.0.0-4.0.0-beta.40"
+    "@girs/xlib-2.0" "2.0.0-4.0.0-beta.40"
+
+"@girs/meta-17@17.0.0-4.0.0-beta.38", "@girs/meta-17@^17.0.0-4.0.0-beta.38":
   version "17.0.0-4.0.0-beta.38"
   resolved "https://registry.npmjs.org/@girs/meta-17/-/meta-17-17.0.0-4.0.0-beta.38.tgz"
   integrity sha512-mP2q0hcVSuEzdavw6Lp3X5dHnG5F5B37GN0JAKX8v3jnpJ28HlcrsadtW9SmCmX5EHDc5pVyslcnNoF3YD1fJQ==
@@ -501,7 +859,18 @@
     "@girs/xfixes-4.0" "4.0.0-4.0.0-beta.38"
     "@girs/xlib-2.0" "2.0.0-4.0.0-beta.38"
 
-"@girs/mtk-17@^17.0.0-4.0.0-beta.37", "@girs/mtk-17@^17.0.0-4.0.0-beta.38", "@girs/mtk-17@17.0.0-4.0.0-beta.38":
+"@girs/mtk-13@^13.0.0-4.0.0-beta.40":
+  version "13.0.0-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/mtk-13/-/mtk-13-13.0.0-4.0.0-beta.40.tgz"
+  integrity sha512-I3yLTBa83tj8DVHH7gRLXEUpME2YQNVr/0DFRlNFpEDL5ZP79YKSnr5EYyzPu5eWHLII12UyJBYwAB5S6YCdzA==
+  dependencies:
+    "@girs/cairo-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/graphene-1.0" "1.0.0-4.0.0-beta.40"
+
+"@girs/mtk-17@17.0.0-4.0.0-beta.38", "@girs/mtk-17@^17.0.0-4.0.0-beta.38":
   version "17.0.0-4.0.0-beta.38"
   resolved "https://registry.npmjs.org/@girs/mtk-17/-/mtk-17-17.0.0-4.0.0-beta.38.tgz"
   integrity sha512-1uTef46Q2rjjsSaUXJnKdN3vZC8dktn1xX1mpwaTDbSyZ85Og9DGa95N1ZJFSRqmXuR3roYh6m5WxhoF59E9zA==
@@ -522,6 +891,17 @@
     "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.38"
     "@girs/gobject-2.0" "2.86.0-4.0.0-beta.38"
 
+"@girs/nm-1.0@1.49.4-4.0.0-beta.40":
+  version "1.49.4-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/nm-1.0/-/nm-1.0-1.49.4-4.0.0-beta.40.tgz"
+  integrity sha512-TtKdaCijvObUZEF+joQjAuH2DrOu4gNlnzEle0JyuKeVllZQxFziSQ0CdkJ5PY7oQFmrIx0VxWvVSGqZafMhjw==
+  dependencies:
+    "@girs/gio-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+
 "@girs/pango-1.0@1.57.0-4.0.0-beta.38":
   version "1.57.0-4.0.0-beta.38"
   resolved "https://registry.npmjs.org/@girs/pango-1.0/-/pango-1.0-1.57.0-4.0.0-beta.38.tgz"
@@ -535,6 +915,20 @@
     "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.38"
     "@girs/gobject-2.0" "2.86.0-4.0.0-beta.38"
     "@girs/harfbuzz-0.0" "11.5.0-4.0.0-beta.38"
+
+"@girs/pango-1.0@1.57.0-4.0.0-beta.40":
+  version "1.57.0-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/pango-1.0/-/pango-1.0-1.57.0-4.0.0-beta.40.tgz"
+  integrity sha512-H8COoSffShFRilpCh9JQ6Lafd/WG+hPRKNkruvfmLAEcnIDnPDIS79BO3OOJz6E+QWqY9mwQIjqjjPwFcasuzA==
+  dependencies:
+    "@girs/cairo-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/freetype2-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gio-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/harfbuzz-0.0" "11.5.1-4.0.0-beta.40"
 
 "@girs/pangocairo-1.0@1.0.0-4.0.0-beta.38":
   version "1.0.0-4.0.0-beta.38"
@@ -551,7 +945,22 @@
     "@girs/harfbuzz-0.0" "11.5.0-4.0.0-beta.38"
     "@girs/pango-1.0" "1.57.0-4.0.0-beta.38"
 
-"@girs/polkit-1.0@^1.0.0-4.0.0-beta.38", "@girs/polkit-1.0@1.0.0-4.0.0-beta.38":
+"@girs/pangocairo-1.0@1.0.0-4.0.0-beta.40":
+  version "1.0.0-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/pangocairo-1.0/-/pangocairo-1.0-1.0.0-4.0.0-beta.40.tgz"
+  integrity sha512-CFvAGWXWN/Ui469met+Q39Tmyn910Y6g+pBxWC60q5T1F9jck7qjehn1/Jo6D7R/n2Bh1FVyjYK3JhIwIMGOyw==
+  dependencies:
+    "@girs/cairo-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/freetype2-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gio-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/harfbuzz-0.0" "11.5.1-4.0.0-beta.40"
+    "@girs/pango-1.0" "1.57.0-4.0.0-beta.40"
+
+"@girs/polkit-1.0@1.0.0-4.0.0-beta.38", "@girs/polkit-1.0@^1.0.0-4.0.0-beta.38":
   version "1.0.0-4.0.0-beta.38"
   resolved "https://registry.npmjs.org/@girs/polkit-1.0/-/polkit-1.0-1.0.0-4.0.0-beta.38.tgz"
   integrity sha512-jcz4/vUtchFQyM3OjSzpEAahsZ2/TGttgxcuxDeEGUMXrIjh7YC4w1oq2CLsRbTyVe843ZLNEkmR+dNGsAMfvQ==
@@ -561,6 +970,17 @@
     "@girs/glib-2.0" "2.86.0-4.0.0-beta.38"
     "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.38"
     "@girs/gobject-2.0" "2.86.0-4.0.0-beta.38"
+
+"@girs/polkit-1.0@1.0.0-4.0.0-beta.40":
+  version "1.0.0-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/polkit-1.0/-/polkit-1.0-1.0.0-4.0.0-beta.40.tgz"
+  integrity sha512-lkfRyghpbpgY7RRG1yKKfKlPVk2bxqq21ZLlgHyt6N2gCkBLxXq7kWA2unjzMO40JeHlDXWX2yiDNkdTN2q9Wg==
+  dependencies:
+    "@girs/gio-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
 
 "@girs/polkitagent-1.0@1.0.0-4.0.0-beta.38":
   version "1.0.0-4.0.0-beta.38"
@@ -574,7 +994,57 @@
     "@girs/gobject-2.0" "2.86.0-4.0.0-beta.38"
     "@girs/polkit-1.0" "1.0.0-4.0.0-beta.38"
 
-"@girs/shell-17@^17.0.0-4.0.0-beta.37", "@girs/shell-17@^17.0.0-4.0.0-beta.38":
+"@girs/polkitagent-1.0@1.0.0-4.0.0-beta.40":
+  version "1.0.0-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/polkitagent-1.0/-/polkitagent-1.0-1.0.0-4.0.0-beta.40.tgz"
+  integrity sha512-hfjnEwlM868t8h1Skj159Ag6qC4yn4o++b8m3WNMiowoP9RuauR6hnPaNZMEQhkln7Lg2gZmsKSPQYlLt2kSRA==
+  dependencies:
+    "@girs/gio-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/polkit-1.0" "1.0.0-4.0.0-beta.40"
+
+"@girs/shell-10@^10.0.0-4.0.0-beta.40":
+  version "10.0.0-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/shell-10/-/shell-10-10.0.0-4.0.0-beta.40.tgz"
+  integrity sha512-zG2+kEk2iLXxKffItdUIxFR/42TpvpaYfK4uIl1xhBpcPlhwmXh/uLWe2kLYIDaCpGUJNpn1rbEopmdMqx1ibA==
+  dependencies:
+    "@girs/atk-1.0" "2.58.3-4.0.0-beta.40"
+    "@girs/cairo-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/cally-10" "10.0.0-4.0.0-beta.40"
+    "@girs/clutter-10" "10.0.0-4.0.0-beta.40"
+    "@girs/cogl-10" "10.0.0-4.0.0-beta.40"
+    "@girs/coglpango-10" "10.0.0-4.0.0-beta.40"
+    "@girs/freetype2-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gck-1" "1.0.0-4.0.0-beta.40"
+    "@girs/gcr-3" "3.41.2-4.0.0-beta.40"
+    "@girs/gdesktopenums-3.0" "3.0.0-4.0.0-beta.40"
+    "@girs/gdk-3.0" "3.24.51-4.0.0-beta.40"
+    "@girs/gdkpixbuf-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gio-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/gl-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/graphene-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/gtk-3.0" "3.24.51-4.0.0-beta.40"
+    "@girs/gvc-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/harfbuzz-0.0" "11.5.1-4.0.0-beta.40"
+    "@girs/json-1.0" "1.10.8-4.0.0-beta.40"
+    "@girs/meta-10" "10.0.0-4.0.0-beta.40"
+    "@girs/nm-1.0" "1.49.4-4.0.0-beta.40"
+    "@girs/pango-1.0" "1.57.0-4.0.0-beta.40"
+    "@girs/pangocairo-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/polkit-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/polkitagent-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/st-10" "10.0.0-4.0.0-beta.40"
+    "@girs/xfixes-4.0" "4.0.0-4.0.0-beta.40"
+    "@girs/xlib-2.0" "2.0.0-4.0.0-beta.40"
+
+"@girs/shell-17@^17.0.0-4.0.0-beta.38":
   version "17.0.0-4.0.0-beta.38"
   resolved "https://registry.npmjs.org/@girs/shell-17/-/shell-17-17.0.0-4.0.0-beta.38.tgz"
   integrity sha512-9NKUpq55Sp1XTnu8qAOr6mD0fpMS080BZIWaEpD7RplI38GL0UOmusME5DBkrCtPYoL08ZrQDnBy5w8FYhaWIw==
@@ -629,7 +1099,38 @@
     "@girs/pango-1.0" "1.57.0-4.0.0-beta.38"
     "@girs/pangocairo-1.0" "1.0.0-4.0.0-beta.38"
 
-"@girs/st-17@^17.0.0-4.0.0-beta.37", "@girs/st-17@^17.0.0-4.0.0-beta.38", "@girs/st-17@17.0.0-4.0.0-beta.38":
+"@girs/st-10@10.0.0-4.0.0-beta.40", "@girs/st-10@^10.0.0-4.0.0-beta.40":
+  version "10.0.0-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/st-10/-/st-10-10.0.0-4.0.0-beta.40.tgz"
+  integrity sha512-ixe0PfQF2v1hqUeNhww9+nmnQCPqsKQ4zLW8ktm0OFQ1XUGMWz/qrnK42aGnIYcKAHWtgtBtsGv5vDjQ9tenDA==
+  dependencies:
+    "@girs/atk-1.0" "2.58.3-4.0.0-beta.40"
+    "@girs/cairo-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/cally-10" "10.0.0-4.0.0-beta.40"
+    "@girs/clutter-10" "10.0.0-4.0.0-beta.40"
+    "@girs/cogl-10" "10.0.0-4.0.0-beta.40"
+    "@girs/coglpango-10" "10.0.0-4.0.0-beta.40"
+    "@girs/freetype2-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gdesktopenums-3.0" "3.0.0-4.0.0-beta.40"
+    "@girs/gdk-3.0" "3.24.51-4.0.0-beta.40"
+    "@girs/gdkpixbuf-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gio-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/gl-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/glib-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/gmodule-2.0" "2.0.0-4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+    "@girs/graphene-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/gtk-3.0" "3.24.51-4.0.0-beta.40"
+    "@girs/harfbuzz-0.0" "11.5.1-4.0.0-beta.40"
+    "@girs/json-1.0" "1.10.8-4.0.0-beta.40"
+    "@girs/meta-10" "10.0.0-4.0.0-beta.40"
+    "@girs/pango-1.0" "1.57.0-4.0.0-beta.40"
+    "@girs/pangocairo-1.0" "1.0.0-4.0.0-beta.40"
+    "@girs/xfixes-4.0" "4.0.0-4.0.0-beta.40"
+    "@girs/xlib-2.0" "2.0.0-4.0.0-beta.40"
+
+"@girs/st-17@17.0.0-4.0.0-beta.38", "@girs/st-17@^17.0.0-4.0.0-beta.38":
   version "17.0.0-4.0.0-beta.38"
   resolved "https://registry.npmjs.org/@girs/st-17/-/st-17-17.0.0-4.0.0-beta.38.tgz"
   integrity sha512-AGW+9E2SRZl1fD1q7iiDSaeR8AWV8zxYnlMixjoSGDP+MYiG2tb15l5dERZiszDUoIe0s8COvVbzfLp1ocSSlw==
@@ -674,6 +1175,14 @@
     "@girs/gjs" "4.0.0-beta.38"
     "@girs/gobject-2.0" "2.86.0-4.0.0-beta.38"
 
+"@girs/xfixes-4.0@4.0.0-4.0.0-beta.40":
+  version "4.0.0-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/xfixes-4.0/-/xfixes-4.0-4.0.0-4.0.0-beta.40.tgz"
+  integrity sha512-HSyQ7+pIeT+pIpTCY+sYMjp2yA5jn/bxOjf5kBK/COgMlCZVCYDPAKmgaMmA07PqE1TfI+6e/bpgIjvlPG0VFQ==
+  dependencies:
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
+
 "@girs/xlib-2.0@2.0.0-4.0.0-beta.38":
   version "2.0.0-4.0.0-beta.38"
   resolved "https://registry.npmjs.org/@girs/xlib-2.0/-/xlib-2.0-2.0.0-4.0.0-beta.38.tgz"
@@ -681,6 +1190,14 @@
   dependencies:
     "@girs/gjs" "4.0.0-beta.38"
     "@girs/gobject-2.0" "2.86.0-4.0.0-beta.38"
+
+"@girs/xlib-2.0@2.0.0-4.0.0-beta.40":
+  version "2.0.0-4.0.0-beta.40"
+  resolved "https://registry.npmjs.org/@girs/xlib-2.0/-/xlib-2.0-2.0.0-4.0.0-beta.40.tgz"
+  integrity sha512-vrVIhVaP5zwJ0SK094K9WqeZmk0mAKLnQEIMk3i3UUr+O4eC0CWf6rZEjPIlYJ3kp+zcubPs/CL8aIOHBOKNYg==
+  dependencies:
+    "@girs/gjs" "4.0.0-beta.40"
+    "@girs/gobject-2.0" "2.86.4-4.0.0-beta.40"
 
 "@humanfs/core@^0.19.1":
   version "0.19.1"
@@ -725,111 +1242,111 @@
   resolved "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.15.tgz"
   integrity sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==
 
-"@typescript-eslint/eslint-plugin@^8.53.0", "@typescript-eslint/eslint-plugin@8.53.0":
-  version "8.53.0"
-  resolved "https://registry.npmjs.org/@typescript-eslint/eslint-plugin/-/eslint-plugin-8.53.0.tgz"
-  integrity sha512-eEXsVvLPu8Z4PkFibtuFJLJOTAV/nPdgtSjkGoPpddpFk3/ym2oy97jynY6ic2m6+nc5M8SE1e9v/mHKsulcJg==
+"@typescript-eslint/eslint-plugin@8.56.1", "@typescript-eslint/eslint-plugin@^8.56.1":
+  version "8.56.1"
+  resolved "https://registry.npmjs.org/@typescript-eslint/eslint-plugin/-/eslint-plugin-8.56.1.tgz"
+  integrity sha512-Jz9ZztpB37dNC+HU2HI28Bs9QXpzCz+y/twHOwhyrIRdbuVDxSytJNDl6z/aAKlaRIwC7y8wJdkBv7FxYGgi0A==
   dependencies:
     "@eslint-community/regexpp" "^4.12.2"
-    "@typescript-eslint/scope-manager" "8.53.0"
-    "@typescript-eslint/type-utils" "8.53.0"
-    "@typescript-eslint/utils" "8.53.0"
-    "@typescript-eslint/visitor-keys" "8.53.0"
+    "@typescript-eslint/scope-manager" "8.56.1"
+    "@typescript-eslint/type-utils" "8.56.1"
+    "@typescript-eslint/utils" "8.56.1"
+    "@typescript-eslint/visitor-keys" "8.56.1"
     ignore "^7.0.5"
     natural-compare "^1.4.0"
     ts-api-utils "^2.4.0"
 
-"@typescript-eslint/parser@^8.53.0", "@typescript-eslint/parser@8.53.0":
-  version "8.53.0"
-  resolved "https://registry.npmjs.org/@typescript-eslint/parser/-/parser-8.53.0.tgz"
-  integrity sha512-npiaib8XzbjtzS2N4HlqPvlpxpmZ14FjSJrteZpPxGUaYPlvhzlzUZ4mZyABo0EFrOWnvyd0Xxroq//hKhtAWg==
+"@typescript-eslint/parser@8.56.1", "@typescript-eslint/parser@^8.56.1":
+  version "8.56.1"
+  resolved "https://registry.npmjs.org/@typescript-eslint/parser/-/parser-8.56.1.tgz"
+  integrity sha512-klQbnPAAiGYFyI02+znpBRLyjL4/BrBd0nyWkdC0s/6xFLkXYQ8OoRrSkqacS1ddVxf/LDyODIKbQ5TgKAf/Fg==
   dependencies:
-    "@typescript-eslint/scope-manager" "8.53.0"
-    "@typescript-eslint/types" "8.53.0"
-    "@typescript-eslint/typescript-estree" "8.53.0"
-    "@typescript-eslint/visitor-keys" "8.53.0"
+    "@typescript-eslint/scope-manager" "8.56.1"
+    "@typescript-eslint/types" "8.56.1"
+    "@typescript-eslint/typescript-estree" "8.56.1"
+    "@typescript-eslint/visitor-keys" "8.56.1"
     debug "^4.4.3"
 
-"@typescript-eslint/project-service@8.53.0":
-  version "8.53.0"
-  resolved "https://registry.npmjs.org/@typescript-eslint/project-service/-/project-service-8.53.0.tgz"
-  integrity sha512-Bl6Gdr7NqkqIP5yP9z1JU///Nmes4Eose6L1HwpuVHwScgDPPuEWbUVhvlZmb8hy0vX9syLk5EGNL700WcBlbg==
+"@typescript-eslint/project-service@8.56.1":
+  version "8.56.1"
+  resolved "https://registry.npmjs.org/@typescript-eslint/project-service/-/project-service-8.56.1.tgz"
+  integrity sha512-TAdqQTzHNNvlVFfR+hu2PDJrURiwKsUvxFn1M0h95BB8ah5jejas08jUWG4dBA68jDMI988IvtfdAI53JzEHOQ==
   dependencies:
-    "@typescript-eslint/tsconfig-utils" "^8.53.0"
-    "@typescript-eslint/types" "^8.53.0"
+    "@typescript-eslint/tsconfig-utils" "^8.56.1"
+    "@typescript-eslint/types" "^8.56.1"
     debug "^4.4.3"
 
-"@typescript-eslint/scope-manager@8.53.0":
-  version "8.53.0"
-  resolved "https://registry.npmjs.org/@typescript-eslint/scope-manager/-/scope-manager-8.53.0.tgz"
-  integrity sha512-kWNj3l01eOGSdVBnfAF2K1BTh06WS0Yet6JUgb9Cmkqaz3Jlu0fdVUjj9UI8gPidBWSMqDIglmEXifSgDT/D0g==
+"@typescript-eslint/scope-manager@8.56.1":
+  version "8.56.1"
+  resolved "https://registry.npmjs.org/@typescript-eslint/scope-manager/-/scope-manager-8.56.1.tgz"
+  integrity sha512-YAi4VDKcIZp0O4tz/haYKhmIDZFEUPOreKbfdAN3SzUDMcPhJ8QI99xQXqX+HoUVq8cs85eRKnD+rne2UAnj2w==
   dependencies:
-    "@typescript-eslint/types" "8.53.0"
-    "@typescript-eslint/visitor-keys" "8.53.0"
+    "@typescript-eslint/types" "8.56.1"
+    "@typescript-eslint/visitor-keys" "8.56.1"
 
-"@typescript-eslint/tsconfig-utils@^8.53.0", "@typescript-eslint/tsconfig-utils@8.53.0":
-  version "8.53.0"
-  resolved "https://registry.npmjs.org/@typescript-eslint/tsconfig-utils/-/tsconfig-utils-8.53.0.tgz"
-  integrity sha512-K6Sc0R5GIG6dNoPdOooQ+KtvT5KCKAvTcY8h2rIuul19vxH5OTQk7ArKkd4yTzkw66WnNY0kPPzzcmWA+XRmiA==
+"@typescript-eslint/tsconfig-utils@8.56.1", "@typescript-eslint/tsconfig-utils@^8.56.1":
+  version "8.56.1"
+  resolved "https://registry.npmjs.org/@typescript-eslint/tsconfig-utils/-/tsconfig-utils-8.56.1.tgz"
+  integrity sha512-qOtCYzKEeyr3aR9f28mPJqBty7+DBqsdd63eO0yyDwc6vgThj2UjWfJIcsFeSucYydqcuudMOprZ+x1SpF3ZuQ==
 
-"@typescript-eslint/type-utils@8.53.0":
-  version "8.53.0"
-  resolved "https://registry.npmjs.org/@typescript-eslint/type-utils/-/type-utils-8.53.0.tgz"
-  integrity sha512-BBAUhlx7g4SmcLhn8cnbxoxtmS7hcq39xKCgiutL3oNx1TaIp+cny51s8ewnKMpVUKQUGb41RAUWZ9kxYdovuw==
+"@typescript-eslint/type-utils@8.56.1":
+  version "8.56.1"
+  resolved "https://registry.npmjs.org/@typescript-eslint/type-utils/-/type-utils-8.56.1.tgz"
+  integrity sha512-yB/7dxi7MgTtGhZdaHCemf7PuwrHMenHjmzgUW1aJpO+bBU43OycnM3Wn+DdvDO/8zzA9HlhaJ0AUGuvri4oGg==
   dependencies:
-    "@typescript-eslint/types" "8.53.0"
-    "@typescript-eslint/typescript-estree" "8.53.0"
-    "@typescript-eslint/utils" "8.53.0"
+    "@typescript-eslint/types" "8.56.1"
+    "@typescript-eslint/typescript-estree" "8.56.1"
+    "@typescript-eslint/utils" "8.56.1"
     debug "^4.4.3"
     ts-api-utils "^2.4.0"
 
-"@typescript-eslint/types@^8.52.0", "@typescript-eslint/types@^8.53.0", "@typescript-eslint/types@8.53.0":
-  version "8.53.0"
-  resolved "https://registry.npmjs.org/@typescript-eslint/types/-/types-8.53.0.tgz"
-  integrity sha512-Bmh9KX31Vlxa13+PqPvt4RzKRN1XORYSLlAE+sO1i28NkisGbTtSLFVB3l7PWdHtR3E0mVMuC7JilWJ99m2HxQ==
+"@typescript-eslint/types@8.56.1", "@typescript-eslint/types@^8.54.0", "@typescript-eslint/types@^8.56.1":
+  version "8.56.1"
+  resolved "https://registry.npmjs.org/@typescript-eslint/types/-/types-8.56.1.tgz"
+  integrity sha512-dbMkdIUkIkchgGDIv7KLUpa0Mda4IYjo4IAMJUZ+3xNoUXxMsk9YtKpTHSChRS85o+H9ftm51gsK1dZReY9CVw==
 
-"@typescript-eslint/typescript-estree@8.53.0":
-  version "8.53.0"
-  resolved "https://registry.npmjs.org/@typescript-eslint/typescript-estree/-/typescript-estree-8.53.0.tgz"
-  integrity sha512-pw0c0Gdo7Z4xOG987u3nJ8akL9093yEEKv8QTJ+Bhkghj1xyj8cgPaavlr9rq8h7+s6plUJ4QJYw2gCZodqmGw==
+"@typescript-eslint/typescript-estree@8.56.1":
+  version "8.56.1"
+  resolved "https://registry.npmjs.org/@typescript-eslint/typescript-estree/-/typescript-estree-8.56.1.tgz"
+  integrity sha512-qzUL1qgalIvKWAf9C1HpvBjif+Vm6rcT5wZd4VoMb9+Km3iS3Cv9DY6dMRMDtPnwRAFyAi7YXJpTIEXLvdfPxg==
   dependencies:
-    "@typescript-eslint/project-service" "8.53.0"
-    "@typescript-eslint/tsconfig-utils" "8.53.0"
-    "@typescript-eslint/types" "8.53.0"
-    "@typescript-eslint/visitor-keys" "8.53.0"
+    "@typescript-eslint/project-service" "8.56.1"
+    "@typescript-eslint/tsconfig-utils" "8.56.1"
+    "@typescript-eslint/types" "8.56.1"
+    "@typescript-eslint/visitor-keys" "8.56.1"
     debug "^4.4.3"
-    minimatch "^9.0.5"
+    minimatch "^10.2.2"
     semver "^7.7.3"
     tinyglobby "^0.2.15"
     ts-api-utils "^2.4.0"
 
-"@typescript-eslint/utils@8.53.0":
-  version "8.53.0"
-  resolved "https://registry.npmjs.org/@typescript-eslint/utils/-/utils-8.53.0.tgz"
-  integrity sha512-XDY4mXTez3Z1iRDI5mbRhH4DFSt46oaIFsLg+Zn97+sYrXACziXSQcSelMybnVZ5pa1P6xYkPr5cMJyunM1ZDA==
+"@typescript-eslint/utils@8.56.1":
+  version "8.56.1"
+  resolved "https://registry.npmjs.org/@typescript-eslint/utils/-/utils-8.56.1.tgz"
+  integrity sha512-HPAVNIME3tABJ61siYlHzSWCGtOoeP2RTIaHXFMPqjrQKCGB9OgUVdiNgH7TJS2JNIQ5qQ4RsAUDuGaGme/KOA==
   dependencies:
     "@eslint-community/eslint-utils" "^4.9.1"
-    "@typescript-eslint/scope-manager" "8.53.0"
-    "@typescript-eslint/types" "8.53.0"
-    "@typescript-eslint/typescript-estree" "8.53.0"
+    "@typescript-eslint/scope-manager" "8.56.1"
+    "@typescript-eslint/types" "8.56.1"
+    "@typescript-eslint/typescript-estree" "8.56.1"
 
-"@typescript-eslint/visitor-keys@8.53.0":
-  version "8.53.0"
-  resolved "https://registry.npmjs.org/@typescript-eslint/visitor-keys/-/visitor-keys-8.53.0.tgz"
-  integrity sha512-LZ2NqIHFhvFwxG0qZeLL9DvdNAHPGCY5dIRwBhyYeU+LfLhcStE1ImjsuTG/WaVh3XysGaeLW8Rqq7cGkPCFvw==
+"@typescript-eslint/visitor-keys@8.56.1":
+  version "8.56.1"
+  resolved "https://registry.npmjs.org/@typescript-eslint/visitor-keys/-/visitor-keys-8.56.1.tgz"
+  integrity sha512-KiROIzYdEV85YygXw6BI/Dx4fnBlFQu6Mq4QE4MOH9fFnhohw6wX/OAvDY2/C+ut0I3RSPKenvZJIVYqJNkhEw==
   dependencies:
-    "@typescript-eslint/types" "8.53.0"
-    eslint-visitor-keys "^4.2.1"
+    "@typescript-eslint/types" "8.56.1"
+    eslint-visitor-keys "^5.0.0"
 
 acorn-jsx@^5.3.2:
   version "5.3.2"
   resolved "https://registry.npmjs.org/acorn-jsx/-/acorn-jsx-5.3.2.tgz"
   integrity sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==
 
-"acorn@^6.0.0 || ^7.0.0 || ^8.0.0", acorn@^8.15.0:
-  version "8.15.0"
-  resolved "https://registry.npmjs.org/acorn/-/acorn-8.15.0.tgz"
-  integrity sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg==
+acorn@^8.15.0, acorn@^8.16.0:
+  version "8.16.0"
+  resolved "https://registry.npmjs.org/acorn/-/acorn-8.16.0.tgz"
+  integrity sha512-UVJyE9MttOsBQIDKw1skb9nAwQuR5wuGD3+82K6JgJlm/Y+KI92oNsMNGZCYdDsVtRHSak0pcV5Dno5+4jh9sw==
 
 ajv@^6.12.4:
   version "6.12.6"
@@ -863,6 +1380,11 @@ balanced-match@^1.0.0:
   resolved "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
+balanced-match@^4.0.2:
+  version "4.0.4"
+  resolved "https://registry.npmjs.org/balanced-match/-/balanced-match-4.0.4.tgz"
+  integrity sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==
+
 brace-expansion@^1.1.7:
   version "1.1.12"
   resolved "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.12.tgz"
@@ -871,12 +1393,12 @@ brace-expansion@^1.1.7:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
 
-brace-expansion@^2.0.1:
-  version "2.0.2"
-  resolved "https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.0.2.tgz"
-  integrity sha512-Jt0vHyM+jmUBqojB7E1NIYadt0vI0Qxjxd2TErW94wDz+E2LAm5vKMXXwg6ZZBTHPuUlDgQHKXvjGBdfcF1ZDQ==
+brace-expansion@^5.0.2:
+  version "5.0.4"
+  resolved "https://registry.npmjs.org/brace-expansion/-/brace-expansion-5.0.4.tgz"
+  integrity sha512-h+DEnpVvxmfVefa4jFbCf5HdH5YMDXRsmKflpf1pILZWRFlTbJpxeU55nJl4Smt5HQaGzg1o6RHFPJaOqnmBDg==
   dependencies:
-    balanced-match "^1.0.0"
+    balanced-match "^4.0.2"
 
 callsites@^3.0.0:
   version "3.1.0"
@@ -903,10 +1425,10 @@ color-name@~1.1.4:
   resolved "https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
-comment-parser@1.4.1:
-  version "1.4.1"
-  resolved "https://registry.npmjs.org/comment-parser/-/comment-parser-1.4.1.tgz"
-  integrity sha512-buhp5kePrmda3vhc5B9t7pUQXAb2Tnd0qgpkIhPhkHXxJpiPJ11H0ZEU0oBpJ2QztSbzG/ZxMj/CHsYJqRHmyg==
+comment-parser@1.4.5:
+  version "1.4.5"
+  resolved "https://registry.npmjs.org/comment-parser/-/comment-parser-1.4.5.tgz"
+  integrity sha512-aRDkn3uyIlCFfk5NUA+VdwMmMsh8JGhc4hapfV4yxymHGQ3BVskMQfoXGpCo5IoBuQ9tS5iiVKhCpTcB4pW4qw==
 
 concat-map@0.0.1:
   version "0.0.1"
@@ -939,7 +1461,7 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
-eslint-config-prettier@^10.1.8, "eslint-config-prettier@>= 7.0.0 <10.0.0 || >=10.1.0":
+eslint-config-prettier@^10.1.8:
   version "10.1.8"
   resolved "https://registry.npmjs.org/eslint-config-prettier/-/eslint-config-prettier-10.1.8.tgz"
   integrity sha512-82GZUjRS0p/jganf6q1rEO25VSoHH0hKPCTrgillPjdI/3bgBhAE1QzHrHTizjpRvy6pGAvKjDJtk2pF9NDq8w==
@@ -949,33 +1471,33 @@ eslint-formatter-junit@^9.0.1:
   resolved "https://registry.npmjs.org/eslint-formatter-junit/-/eslint-formatter-junit-9.0.1.tgz"
   integrity sha512-0MrNGXg2C46M/ImjWuClHSGKHBR0eSBPfYHqPgYmB0utq7Jog3YyLBmbshNvo/Ba/Al3zClPWdd6/jnxk2F+9Q==
 
-eslint-plugin-jsdoc@^62.0.0:
-  version "62.0.0"
-  resolved "https://registry.npmjs.org/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-62.0.0.tgz"
-  integrity sha512-sNdIGLAvjFK3pB0SYFW74iXODZ4ifF8Ax13Wgq8jKepKnrCFzGo7+jRZfLf70h81SD7lPYnTE7MR2nhYSvaLTA==
+eslint-plugin-jsdoc@^62.7.1:
+  version "62.7.1"
+  resolved "https://registry.npmjs.org/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-62.7.1.tgz"
+  integrity sha512-4Zvx99Q7d1uggYBUX/AIjvoyqXhluGbbKrRmG8SQTLprPFg6fa293tVJH1o1GQwNe3lUydd8ZHzn37OaSncgSQ==
   dependencies:
-    "@es-joy/jsdoccomment" "~0.79.0"
+    "@es-joy/jsdoccomment" "~0.84.0"
     "@es-joy/resolve.exports" "1.2.0"
     are-docs-informative "^0.0.2"
-    comment-parser "1.4.1"
+    comment-parser "1.4.5"
     debug "^4.4.3"
     escape-string-regexp "^4.0.0"
-    espree "^11.0.0"
+    espree "^11.1.0"
     esquery "^1.7.0"
     html-entities "^2.6.0"
     object-deep-merge "^2.0.0"
     parse-imports-exports "^0.2.4"
-    semver "^7.7.3"
+    semver "^7.7.4"
     spdx-expression-parse "^4.0.0"
     to-valid-identifier "^1.0.0"
 
-eslint-plugin-prettier@^5.5.4:
-  version "5.5.4"
-  resolved "https://registry.npmjs.org/eslint-plugin-prettier/-/eslint-plugin-prettier-5.5.4.tgz"
-  integrity sha512-swNtI95SToIz05YINMA6Ox5R057IMAmWZ26GqPxusAp1TZzj+IdY9tXNWWD3vkF/wEqydCONcwjTFpxybBqZsg==
+eslint-plugin-prettier@^5.5.5:
+  version "5.5.5"
+  resolved "https://registry.npmjs.org/eslint-plugin-prettier/-/eslint-plugin-prettier-5.5.5.tgz"
+  integrity sha512-hscXkbqUZ2sPithAuLm5MXL+Wph+U7wHngPBv9OMWwlP8iaflyxpjTYZkmdgB4/vPIhemRlBEoLrH7UC1n7aUw==
   dependencies:
-    prettier-linter-helpers "^1.0.0"
-    synckit "^0.11.7"
+    prettier-linter-helpers "^1.0.1"
+    synckit "^0.11.12"
 
 eslint-scope@^8.4.0:
   version "8.4.0"
@@ -1000,7 +1522,12 @@ eslint-visitor-keys@^5.0.0:
   resolved "https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-5.0.0.tgz"
   integrity sha512-A0XeIi7CXU7nPlfHS9loMYEKxUaONu/hTEzHTGba9Huu94Cq1hPivf+DE5erJozZOky0LfvXAyrV/tcswpLI0Q==
 
-"eslint@^6.0.0 || ^7.0.0 || >=8.0.0", "eslint@^7.0.0 || ^8.0.0 || ^9.0.0", "eslint@^8.57.0 || ^9.0.0", eslint@^9.39.2, eslint@>=7.0.0, eslint@>=8.0.0:
+eslint-visitor-keys@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-5.0.1.tgz"
+  integrity sha512-tD40eHxA35h0PEIZNeIjkHoDR4YjjJp34biM0mDvplBe//mB+IHCqHDGV7pxF+7MklTvighcCPPZC7ynWyjdTA==
+
+eslint@^9.39.2:
   version "9.39.2"
   resolved "https://registry.npmjs.org/eslint/-/eslint-9.39.2.tgz"
   integrity sha512-LEyamqS7W5HB3ujJyvi0HQK/dtVINZvd5mAAp9eT5S/ujByGjiZLCzPcHVzuXbpJDJF/cxwHlfceVUDZ2lnSTw==
@@ -1049,14 +1576,14 @@ espree@^10.0.1, espree@^10.4.0:
     acorn-jsx "^5.3.2"
     eslint-visitor-keys "^4.2.1"
 
-espree@^11.0.0:
-  version "11.0.0"
-  resolved "https://registry.npmjs.org/espree/-/espree-11.0.0.tgz"
-  integrity sha512-+gMeWRrIh/NsG+3NaLeWHuyeyk70p2tbvZIWBYcqQ4/7Xvars6GYTZNhF1sIeLcc6Wb11He5ffz3hsHyXFrw5A==
+espree@^11.1.0:
+  version "11.2.0"
+  resolved "https://registry.npmjs.org/espree/-/espree-11.2.0.tgz"
+  integrity sha512-7p3DrVEIopW1B1avAGLuCSh1jubc01H2JHc8B4qqGblmg5gI9yumBgACjWo4JlIc04ufug4xJ3SQI8HkS/Rgzw==
   dependencies:
-    acorn "^8.15.0"
+    acorn "^8.16.0"
     acorn-jsx "^5.3.2"
-    eslint-visitor-keys "^5.0.0"
+    eslint-visitor-keys "^5.0.1"
 
 esquery@^1.5.0, esquery@^1.7.0:
   version "1.7.0"
@@ -1147,10 +1674,10 @@ globals@^14.0.0:
   resolved "https://registry.npmjs.org/globals/-/globals-14.0.0.tgz"
   integrity sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==
 
-globals@^17.0.0:
-  version "17.0.0"
-  resolved "https://registry.npmjs.org/globals/-/globals-17.0.0.tgz"
-  integrity sha512-gv5BeD2EssA793rlFWVPMMCqefTlpusw6/2TbAVMy0FzcG8wKJn4O+NqJ4+XWmmwrayJgw5TzrmWjFgmz1XPqw==
+globals@^17.4.0:
+  version "17.4.0"
+  resolved "https://registry.npmjs.org/globals/-/globals-17.4.0.tgz"
+  integrity sha512-hjrNztw/VajQwOLsMNT1cbJiH2muO3OROCHnbehc8eY5JyD2gqz4AcMHPqgaOR59DjgUjYAYLeH699g/eWi2jw==
 
 has-flag@^4.0.0:
   version "4.0.0"
@@ -1214,10 +1741,10 @@ js-yaml@^4.1.1:
   dependencies:
     argparse "^2.0.1"
 
-jsdoc-type-pratt-parser@~7.0.0:
-  version "7.0.0"
-  resolved "https://registry.npmjs.org/jsdoc-type-pratt-parser/-/jsdoc-type-pratt-parser-7.0.0.tgz"
-  integrity sha512-c7YbokssPOSHmqTbSAmTtnVgAVa/7lumWNYqomgd5KOMyPrRve2anx6lonfOsXEQacqF9FKVUj7bLg4vRSvdYA==
+jsdoc-type-pratt-parser@~7.1.1:
+  version "7.1.1"
+  resolved "https://registry.npmjs.org/jsdoc-type-pratt-parser/-/jsdoc-type-pratt-parser-7.1.1.tgz"
+  integrity sha512-/2uqY7x6bsrpi3i9LVU6J89352C0rpMk0as8trXxCtvd4kPk1ke/Eyif6wqfSLvoNJqcDG9Vk4UsXgygzCt2xA==
 
 json-buffer@3.0.1:
   version "3.0.1"
@@ -1261,19 +1788,19 @@ lodash.merge@^4.6.2:
   resolved "https://registry.npmjs.org/lodash.merge/-/lodash.merge-4.6.2.tgz"
   integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
 
+minimatch@^10.2.2:
+  version "10.2.4"
+  resolved "https://registry.npmjs.org/minimatch/-/minimatch-10.2.4.tgz"
+  integrity sha512-oRjTw/97aTBN0RHbYCdtF1MQfvusSIBQM0IZEgzl6426+8jSC0nF1a/GmnVLpfB9yyr6g6FTqWqiZVbxrtaCIg==
+  dependencies:
+    brace-expansion "^5.0.2"
+
 minimatch@^3.1.2:
   version "3.1.2"
   resolved "https://registry.npmjs.org/minimatch/-/minimatch-3.1.2.tgz"
   integrity sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==
   dependencies:
     brace-expansion "^1.1.7"
-
-minimatch@^9.0.5:
-  version "9.0.5"
-  resolved "https://registry.npmjs.org/minimatch/-/minimatch-9.0.5.tgz"
-  integrity sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow==
-  dependencies:
-    brace-expansion "^2.0.1"
 
 ms@^2.1.3:
   version "2.1.3"
@@ -1345,7 +1872,7 @@ path-key@^3.1.0:
   resolved "https://registry.npmjs.org/path-key/-/path-key-3.1.1.tgz"
   integrity sha512-ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q==
 
-"picomatch@^3 || ^4", picomatch@^4.0.3:
+picomatch@^4.0.3:
   version "4.0.3"
   resolved "https://registry.npmjs.org/picomatch/-/picomatch-4.0.3.tgz"
   integrity sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q==
@@ -1355,17 +1882,17 @@ prelude-ls@^1.2.1:
   resolved "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-prettier-linter-helpers@^1.0.0:
+prettier-linter-helpers@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/prettier-linter-helpers/-/prettier-linter-helpers-1.0.1.tgz"
   integrity sha512-SxToR7P8Y2lWmv/kTzVLC1t/GDI2WGjMwNhLLE9qtH8Q13C+aEmuRlzDst4Up4s0Wc8sF2M+J57iB3cMLqftfg==
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@^3.7.4, prettier@>=3.0.0:
-  version "3.7.4"
-  resolved "https://registry.npmjs.org/prettier/-/prettier-3.7.4.tgz"
-  integrity sha512-v6UNi1+3hSlVvv8fSaoUbggEM5VErKmmpGA7Pl3HF8V6uKY7rvClBOJlH6yNwQtfTueNkGVpOv/mtWL9L4bgRA==
+prettier@^3.8.1:
+  version "3.8.1"
+  resolved "https://registry.npmjs.org/prettier/-/prettier-3.8.1.tgz"
+  integrity sha512-UOnG6LftzbdaHZcKoPFtOcCKztrQ57WkHDeRD9t/PTQtmT0NHSeWWepj6pS0z/N7+08BHFDQVUrfmfMRcZwbMg==
 
 punycode@^2.1.0:
   version "2.3.1"
@@ -1382,10 +1909,10 @@ resolve-from@^4.0.0:
   resolved "https://registry.npmjs.org/resolve-from/-/resolve-from-4.0.0.tgz"
   integrity sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==
 
-semver@^7.7.3:
-  version "7.7.3"
-  resolved "https://registry.npmjs.org/semver/-/semver-7.7.3.tgz"
-  integrity sha512-SdsKMrI9TdgjdweUSR9MweHA4EJ8YxHn8DFaDisvhVlUOe4BF1tLD7GAj0lIqWVl+dPb/rExr0Btby5loQm20Q==
+semver@^7.7.3, semver@^7.7.4:
+  version "7.7.4"
+  resolved "https://registry.npmjs.org/semver/-/semver-7.7.4.tgz"
+  integrity sha512-vFKC2IEtQnVhpT78h1Yp8wzwrf8CM+MzKMHGJZfBtzhZNycRFnXsHk6E5TxIkkMsgNS7mdX3AGB7x2QM2di4lA==
 
 shebang-command@^2.0.0:
   version "2.0.0"
@@ -1429,10 +1956,10 @@ supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-synckit@^0.11.7:
-  version "0.11.11"
-  resolved "https://registry.npmjs.org/synckit/-/synckit-0.11.11.tgz"
-  integrity sha512-MeQTA1r0litLUf0Rp/iisCaL8761lKAZHaimlbGK4j0HysC4PLfqygQj9srcs0m2RdtDYnF8UuYyKpbjHYp7Jw==
+synckit@^0.11.12:
+  version "0.11.12"
+  resolved "https://registry.npmjs.org/synckit/-/synckit-0.11.12.tgz"
+  integrity sha512-Bh7QjT8/SuKUIfObSXNHNSK6WHo6J1tHCqJsuaFDP7gP0fkzSfTxI8y85JrppZ0h8l0maIgc2tfuZQ6/t3GtnQ==
   dependencies:
     "@pkgr/core" "^0.2.9"
 
@@ -1464,17 +1991,17 @@ type-check@^0.4.0, type-check@~0.4.0:
   dependencies:
     prelude-ls "^1.2.1"
 
-typescript-eslint@^8.53.0:
-  version "8.53.0"
-  resolved "https://registry.npmjs.org/typescript-eslint/-/typescript-eslint-8.53.0.tgz"
-  integrity sha512-xHURCQNxZ1dsWn0sdOaOfCSQG0HKeqSj9OexIxrz6ypU6wHYOdX2I3D2b8s8wFSsSOYJb+6q283cLiLlkEsBYw==
+typescript-eslint@^8.56.1:
+  version "8.56.1"
+  resolved "https://registry.npmjs.org/typescript-eslint/-/typescript-eslint-8.56.1.tgz"
+  integrity sha512-U4lM6pjmBX7J5wk4szltF7I1cGBHXZopnAXCMXb3+fZ3B/0Z3hq3wS/CCUB2NZBNAExK92mCU2tEohWuwVMsDQ==
   dependencies:
-    "@typescript-eslint/eslint-plugin" "8.53.0"
-    "@typescript-eslint/parser" "8.53.0"
-    "@typescript-eslint/typescript-estree" "8.53.0"
-    "@typescript-eslint/utils" "8.53.0"
+    "@typescript-eslint/eslint-plugin" "8.56.1"
+    "@typescript-eslint/parser" "8.56.1"
+    "@typescript-eslint/typescript-estree" "8.56.1"
+    "@typescript-eslint/utils" "8.56.1"
 
-typescript@^5.9.3, typescript@>=4.8.4, "typescript@>=4.8.4 <6.0.0":
+typescript@^5.9.3:
   version "5.9.3"
   resolved "https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz"
   integrity sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==
