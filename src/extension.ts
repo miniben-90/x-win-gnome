@@ -10,7 +10,7 @@ import type GdkPixbuf from 'gi://GdkPixbuf';
 /**
  * Gnome Extension for x-win project
  */
-class XWinWaylandExtension extends Extension {
+export default class XWinWaylandExtension extends Extension {
   private _dbus?: Gio.DBusExportedObject = undefined;
 
   public static DBUS_OBJECT = `
